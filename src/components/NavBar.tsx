@@ -15,12 +15,12 @@ const NavBar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8 font-medium">
-            <a href="#" className="hover:underline">Home</a>
-            <a href="#" className="hover:underline">About</a>
-            <a href="#" className="hover:underline">Album</a>
-            <a href="#" className="hover:underline">Contact</a>
-          </div>
+          <ol className="hidden md:flex space-x-8 font-medium text-gray-400 opacity-50 cursor-not-allowed">
+            <li>Home</li>
+            <li>About</li>
+            <li>Album</li>
+            <li>Contact</li>
+          </ol>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -57,12 +57,12 @@ const NavBar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-primary px-2 pt-2 pb-3 space-y-1">
-          <a href="#" className="block font-medium text-center hover:underline">Home</a>
-          <a href="#" className="block font-medium text-center hover:underline">About</a>
-          <a href="#" className="block font-medium text-center hover:underline">Services</a>
-          <a href="#" className="block font-medium text-center hover:underline">Contact</a>
-        </div>
+        <ol className="md:hidden bg-primary px-2 pt-2 pb-3 space-y-1">
+          <li className="block font-medium text-center text-gray-400 opacity-50 cursor-not-allowed">Home</li>
+          <li className="block font-medium text-center text-gray-400 opacity-50 cursor-not-allowed">About</li>
+          <li className="block font-medium text-center text-gray-400 opacity-50 cursor-not-allowed">Services</li>
+          <li className="block font-medium text-center text-gray-400 opacity-50 cursor-not-allowed">Contact</li>
+        </ol>
       )}
     </nav>
     )

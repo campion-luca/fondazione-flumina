@@ -4,7 +4,7 @@ const HomePage = () => {
 
     return (
 
-        <div style={{ backgroundColor: "#989d6e" }} className="flex flex-col items-center bg-gray-100">
+        <div style={{ backgroundColor: "#989d6e" }} className="flex flex-col items-center bg-gray-100 min-h-screen">
 
             {/* Titolo principale */}
             <h1 className="text-5xl font-bold text-white-500 mb-4 mt-10">

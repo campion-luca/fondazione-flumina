@@ -4,11 +4,11 @@ const HomePage = () => {
 
     return (
 
-        <div className="flex flex-col items-center bg-gray-100 min-h-screen text-[#1b4a54]">
+        <div className="flex flex-col items-center min-h-screen text-[#1b4a54]">
 
             {/* Titolo principale */}
             <h1 className="text-5xl font-bold text-white-500 mb-4 mt-10">
-                FONDAZIONE FLUMINIA
+                FONDAZIONE FLUMINA
             </h1>
 
             {/* Immagine */}

@@ -58,10 +58,10 @@ const NavBar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-primary px-2 pt-2 pb-3 space-y-1">
-          <a href="#" className="block text-white font-medium hover:underline">Home</a>
-          <a href="#" className="block text-white font-medium hover:underline">About</a>
-          <a href="#" className="block text-white font-medium hover:underline">Services</a>
-          <a href="#" className="block text-white font-medium hover:underline">Contact</a>
+          <a href="#" className="block font-medium text-center hover:underline">Home</a>
+          <a href="#" className="block font-medium text-center hover:underline">About</a>
+          <a href="#" className="block font-medium text-center hover:underline">Services</a>
+          <a href="#" className="block font-medium text-center hover:underline">Contact</a>
         </div>
       )}
     </nav>

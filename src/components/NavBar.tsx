@@ -6,16 +6,16 @@ const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav style={{ backgroundColor: "#d0cf86"}} className="shadow-md">
+        <nav className="shadow-md bg-gray-100 text-[#1b4a54]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <div className="flex-shrink-0 text-white font-bold text-xl">
+          <div className="flex-shrink-0 font-bold text-xl">
             <img src={logo} alt="Logo fondazione flumina" className="h-8 w-8 inline-block mr-2" />
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8 text-white font-medium">
+          <div className="hidden md:flex space-x-8 font-medium">
             <a href="#" className="hover:underline">Home</a>
             <a href="#" className="hover:underline">About</a>
             <a href="#" className="hover:underline">Album</a>
@@ -27,7 +27,7 @@ const NavBar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="text-white focus:outline-none"
+              className="focus:outline-none"
             >
               {isOpen ? (
                 <svg

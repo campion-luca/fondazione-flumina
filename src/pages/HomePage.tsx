@@ -4,7 +4,7 @@ const HomePage = () => {
 
     return (
 
-        <div style={{ backgroundColor: "#989d6e" }} className="flex flex-col items-center bg-gray-100 min-h-screen">
+        <div className="flex flex-col items-center bg-gray-100 min-h-screen text-[#1b4a54]">
 
             {/* Titolo principale */}
             <h1 className="text-5xl font-bold text-white-500 mb-4 mt-10">
@@ -14,9 +14,8 @@ const HomePage = () => {
             {/* Immagine */}
             <img src={logo} alt="Logo Fondazione Flumina" className="h-45 w-45 mb-4 mt-3" />
 
-
             {/* Sottotitolo */}
-            <p className="text-gray-800 text-lg mb-6 text-center px-4 mx-10 mt-3">
+            <p className="text-lg mb-6 text-center px-4 mx-10 mt-3 text-[#1b4a54]">
                 Fondazione dedicata alla promozione di progetti di welfare aziendale, benessere organizzativo e sviluppo sostenibile delle comunità. 
                 La Fondazione Flumina si impegna a creare valore condiviso, contribuendo al miglioramento della qualità della vita delle persone e 
                 al rafforzamento del tessuto sociale e territoriale.

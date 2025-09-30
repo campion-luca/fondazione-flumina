@@ -13,10 +13,11 @@ const HomePage = () => {
             {/* Sottotitolo */}
             <p className="text-lg mb-6 text-justify px-4 mx-12 mt-3 text-[#1b4a54]">
                 Fondazione Flumina nasce a sostegno del benessere collettivo, promuovendo iniziative culturali, formative e di inclusione che
-                favoriscono l’equilibrio tra impresa, persona e comunità. Opera con l’obiettivo di sviluppare progetti innovativi di welfare
+                favoriscono l’equilibrio tra impresa, persona e comunità.
+                <br />
+                Opera con l’obiettivo di sviluppare progetti innovativi di welfare
                 aziendale e per la promozione e valorizzazione territoriale.
                 <br />
-
                 La Fondazione Flumina pone particolare attenzione alla crescita culturale e del tessuto sociale mettendo al centro delle proprie attività
                 l’ascolto dei bisogni del territorio, trasformandoli in progettualità concrete capaci di generare valore condiviso.
             </p>

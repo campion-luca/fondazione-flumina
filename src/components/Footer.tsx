@@ -17,9 +17,14 @@
                         <div className="mt-2 text-end text-sm text-gray-300 flex items-center justify-center flex-col order-1 sm:order-1 lg:order-1">
                             <ol className="list-none">
 
-                                <li className="pb-2 gap-1 flex items-center"><MdOutlineEmail />segreteria@fondazioneflumina.it</li>
-                                <li className="pb-2 gap-1 flex items-center"><SiGooglemaps />Via Nino Bedendo, 22/B, 45100 Rovigo RO</li>
-                                <li className="pb-2 gap-1 flex items-center"><BsTelephone />Tel. 0425 460577</li>
+                                <li className="pb-2 gap-1 flex items-center"><a href="mailto:segreteria@fondazioneflumina.it" className="hover:underline flex items-center gap-1">
+                                    <MdOutlineEmail />segreteria@fondazioneflumina.it</a></li>
+
+                                <li className="pb-2 gap-1 flex items-center"><a href="https://www.google.com/maps/place/Via+Nino+Bedendo,+22/B,+45100+Rovigo+RO" target="_blank" className="hover:underline flex items-center gap-1">
+                                <SiGooglemaps />Via Nino Bedendo, 22/B, 45100 Rovigo RO</a></li>
+
+                                <li className="pb-2 gap-1 flex items-center"><a href="tel:0425460577" className="hover:underline flex items-center gap-1">
+                                    <BsTelephone />Tel. 0425 460577</a></li>
                             </ol>
                         </div>
 

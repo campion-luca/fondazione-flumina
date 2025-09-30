@@ -33,7 +33,6 @@
                             &copy; {new Date().getFullYear()} Fondazione Flumina. Tutti i diritti riservati.
                         </div>
 
-
                         {/* Social */}
                         <div className="mt-2 text-sm text-gray-300 flex justify-center order-2 sm:order-2 lg:order-3">
                             <ol className="flex lg:flex-col gap-4 sm:gap-4 lg:gap-1">

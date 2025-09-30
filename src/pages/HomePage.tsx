@@ -11,7 +11,7 @@ const HomePage = () => {
             <img src={logo} alt="Logo Fondazione Flumina" className="h-80 w-80 mb-4 mt-3" />
 
             {/* Sottotitolo */}
-            <p className="text-lg mb-6 text-justify px-4 mx-20 mt-3 text-[#1b4a54]">
+            <p className="text-lg mb-6 text-justify px-4 mx-12 mt-3 text-[#1b4a54]">
                 Fondazione Flumina nasce a sostegno del benessere collettivo, promuovendo iniziative culturali, formative e di inclusione che
                 favoriscono l’equilibrio tra impresa, persona e comunità. Opera con l’obiettivo di sviluppare progetti innovativi di welfare
                 aziendale e per la promozione e valorizzazione territoriale.

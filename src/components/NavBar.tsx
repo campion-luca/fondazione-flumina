@@ -17,9 +17,11 @@ const NavBar = () => {
           {/* Desktop Menu */}
           <ol className="hidden md:flex space-x-8 font-medium text-gray-400 opacity-50 cursor-not-allowed">
             <li>Home</li>
-            <li>About</li>
+            <li>Eventi</li>
             <li>Album</li>
-            <li>Contact</li>
+            <li>Privacy</li>
+
+            
           </ol>
 
           {/* Mobile Menu Button */}

@@ -1,7 +1,21 @@
 import logo from '../assets/fondazione_flumina.png';
-
+import { useState } from "react";
 
 const HomePage = () => {
+    
+    // Aggiungi il meta tag per la verifica di Google
+    <meta name="google-site-verification" content="SC-Q6Htx_YyzXpNNAyx_Qw0p4y1At8oUzB0QcQUWZKc" />
+
+    // Recupera lo stato dal localStorage
+    const [showBanner, setShowBanner] = useState(() => {
+        return !sessionStorage.getItem("cookieAccepted");
+    });
+
+    // Aggiorna il localStorage quando l'utente clicca "Ho capito"
+    const handleAcceptCookies = () => {
+        sessionStorage.setItem("cookieAccepted", "true");
+        setShowBanner(false);
+    };
 
     return (
 
@@ -27,6 +41,28 @@ const HomePage = () => {
                 SITO IN LAVORAZIONE
             </h2>
 
+            {/* Cookie Banner */}
+            {!showBanner ? null :
+                <div className="fixed bottom-8 font-sans opacity-[.95] left-15 right-15 bg-white border border-gray-600 rounded-lg p-2 shadow-lg flex flex-col md:flex-row items-center justify-between z-50">
+
+                    <p className="text-gray-800 text-sm md:text-sm mb-2 md:mb-0 mx-4 text-justify">
+
+                        Utilizziamo solo cookie tecnici necessari al corretto funzionamento del sito.
+                        <br />
+                        Non raccogliamo dati tramite cookie di profilazione o analitici.{" "}
+                        <a href="/cookie.html" className="text-blue-600 underline hover:text-blue-800">
+                            Consulta la nostra Cookie Policy
+                        </a>
+                        .
+                    </p>
+                    <button
+                        onClick={handleAcceptCookies}
+                        className="bg-[#1b4a54] text-white px-3 py-1 cursor-pointer rounded md:w-auto text-xs md:text-sm"
+                    >
+                        Accetto
+                    </button>
+                </div>
+            }
         </div>
     )
 }

@@ -2,9 +2,6 @@ import logo from '../assets/fondazione_flumina.png';
 import { useState } from "react";
 
 const HomePage = () => {
-    
-    // Aggiungi il meta tag per la verifica di Google
-    <meta name="google-site-verification" content="SC-Q6Htx_YyzXpNNAyx_Qw0p4y1At8oUzB0QcQUWZKc" />
 
     // Recupera lo stato dal localStorage
     const [showBanner, setShowBanner] = useState(() => {

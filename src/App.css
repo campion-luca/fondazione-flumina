@@ -1,5 +1,7 @@
+@import "@fontsource/montserrat";
+
 body {
-  font-family: 'Merriweather', serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .logo {

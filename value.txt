@@ -1,5 +1,10 @@
 Colori utilizzati :
 
+- colori logo
+#1b4a54 --> blu scuro basso
+#989d6e --> verde scuro centro
+#d0cf86 --> verde chiaro sopra
+
 
 Font utilizzati :
 

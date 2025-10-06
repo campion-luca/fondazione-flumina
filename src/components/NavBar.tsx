@@ -17,19 +17,19 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 text-[#1b4a54]">
+    <nav className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 text-[#1b4a54] shadow-sm">
 
       {/* Logo */}
       <Link to="/">
-      <div className="flex-shrink-0 font-bold text-xl md:border-r border-b flex items-center justify-center select-none py-4">
-        <img src={logo_logo} alt="solo Logo fondazione" className="h-15 w-15 inline-block mr-2 cursor-pointer" />
-        <img src={logo_scritta} alt="scritta fondazione flumina" className="h-8 w-60 inline-block mr-2 cursor-pointer" />
-      </div>
+        <div className="flex-shrink-0 font-bold md:border-r border-b flex items-center justify-center select-none py-4">
+          <img src={logo_logo} alt="solo Logo fondazione" className="h-15 w-15 inline-block mr-2 cursor-pointer" />
+          <img src={logo_scritta} alt="scritta fondazione flumina" className="h-8 w-60 inline-block mr-2 cursor-pointer" />
+        </div>
       </Link>
 
       {/* Desktop Menu */}
       <div className="md:border-b flex flex-col justify-start items-start md:pt-5">
-        <ol className="hidden md:flex font-medium text-[#27535d] select-none w-full justify-evenly border-b px-4"> 
+        <ol className="hidden md:flex font-medium text-[#27535d] select-none w-full justify-evenly border-b px-4">
           <li className="cursor-pointer pe-3 border-r" onClick={() => toggleMenu('fondazione')}>La Fondazione</li>
           <li className="cursor-pointer pe-3 border-r" onClick={() => toggleMenu('eventi')}>Eventi</li>
           <li className="cursor-pointer pe-3 border-r" onClick={() => toggleMenu('about')}>About</li>
@@ -45,7 +45,7 @@ const NavBar = () => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.4 }}
-              className="hidden md:flex justify-around items-center w-full space-x-15 font-medium text-[#27535d] pt-2"
+              className="hidden md:flex justify-around items-center w-full space-x-15 font-medium text-[#27535d] pt-2 md:pt-0 lg:pt-2 xl:pt-0"
             >
               <li className="cursor-pointer md:ps-3 hover:underline">La nostra privacy</li>
               <li className="cursor-pointer hover:underline">Il nostro presidente</li>
@@ -97,12 +97,24 @@ const NavBar = () => {
       </div>
 
       {/* Parte di destra */}
-      <div className="hidden xl:flex flex-col items-center justify-end border-l border-b">
+      <div className="hidden xl:grid grid-cols-2 border-b">
+
+        <div className="border-r border-l">
+          <p className="pt-4 ps-4 cursor-not-allowed">Info</p>
+        </div>
+
+        <div>
+          <p className="pt-4 ps-4 cursor-not-allowed">Sito in allestimento</p>
+        </div>
+
+      </div>
+
+      {/* <div className="hidden xl:flex flex-col items-center justify-end border-l border-b">
         <ol className="xl:flex space-x-15 font-medium text-gray-400 select-none">
           <li className="cursor-not-allowed">Info</li>
           <li className="cursor-not-allowed">Sito in allestimento</li>
         </ol>
-      </div>
+      </div> */}
 
       {/* Mobile Menu Button */}
       <div className="md:hidden flex justify-end items-center px-4 py-2 border-b">
@@ -111,6 +123,7 @@ const NavBar = () => {
           type="button"
           className="focus:outline-none cursor-pointer"
         >
+
           {isOpen ? (
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

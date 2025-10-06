@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo_logo from '../assets/solo_logo.png';
 import logo_scritta from '../assets/solo_scritta.png';
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [alignStart, setAlignStart] = useState(true);
@@ -19,12 +20,12 @@ const NavBar = () => {
     <nav className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 text-[#1b4a54]">
 
       {/* Logo */}
-      <a href="/">
+      <Link to="/">
       <div className="flex-shrink-0 font-bold text-xl md:border-r border-b flex items-center justify-center select-none py-4">
         <img src={logo_logo} alt="solo Logo fondazione" className="h-15 w-15 inline-block mr-2 cursor-pointer" />
         <img src={logo_scritta} alt="scritta fondazione flumina" className="h-8 w-60 inline-block mr-2 cursor-pointer" />
       </div>
-      </a>
+      </Link>
 
       {/* Desktop Menu */}
       <div className="md:border-b flex flex-col justify-start items-start md:pt-5">

@@ -1,5 +1,6 @@
 import logo from '../assets/fondazione_flumina.png';
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
 
@@ -44,9 +45,9 @@ const HomePage = () => {
                         Utilizziamo solo cookie tecnici necessari al corretto funzionamento del sito.
 
                         Non raccogliamo dati tramite cookie di profilazione o analitici.{" "}
-                        <a href="/privacy" className="text-blue-600 underline hover:text-blue-800">
+                        <Link to="/privacy" className="text-blue-600 underline hover:text-blue-800">
                             Consulta la nostra Cookie Policy
-                        </a>
+                        </Link>
                         .
                     </p>
 

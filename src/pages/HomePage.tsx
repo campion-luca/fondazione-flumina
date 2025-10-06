@@ -44,7 +44,7 @@ const HomePage = () => {
                         Utilizziamo solo cookie tecnici necessari al corretto funzionamento del sito.
 
                         Non raccogliamo dati tramite cookie di profilazione o analitici.{" "}
-                        <a href="/cookie.html" className="text-blue-600 underline hover:text-blue-800">
+                        <a href="/privacy" className="text-blue-600 underline hover:text-blue-800">
                             Consulta la nostra Cookie Policy
                         </a>
                         .

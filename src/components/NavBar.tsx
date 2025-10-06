@@ -19,10 +19,12 @@ const NavBar = () => {
     <nav className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 text-[#1b4a54]">
 
       {/* Logo */}
+      <a href="/">
       <div className="flex-shrink-0 font-bold text-xl md:border-r border-b flex items-center justify-center select-none py-4">
         <img src={logo_logo} alt="solo Logo fondazione" className="h-15 w-15 inline-block mr-2 cursor-pointer" />
         <img src={logo_scritta} alt="scritta fondazione flumina" className="h-8 w-60 inline-block mr-2 cursor-pointer" />
       </div>
+      </a>
 
       {/* Desktop Menu */}
       <div className="md:border-b flex flex-col justify-start items-start md:pt-5">

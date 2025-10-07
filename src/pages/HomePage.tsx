@@ -1,5 +1,4 @@
 import logo from '../assets/solo_logo.png';
-import Carosello from '../components/Carosello';
 import Cookies from '../components/Cookies';
 
 const HomePage = () => {
@@ -48,7 +47,6 @@ const HomePage = () => {
             < Cookies />
 
             {/* Carosello foto */}
-            {/* < Carosello /> */}
 
 
         </div>

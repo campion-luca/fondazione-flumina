@@ -10,9 +10,17 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
 
-    <NavBar />
-      <App />
-    <Footer />
+      {/* Tutta la pagina deve sempre ricoprire la grandezza dello schermo */}
+      <div className="flex flex-col min-h-screen">
+        <NavBar />
+
+        {/* il contenuto di app prenderà sempre gli spazi "vuoti" se presenti */}
+        <main className="flex-grow">
+          <App />
+        </main>
+
+        <Footer />
+      </div>
 
     </BrowserRouter>
   </StrictMode>,

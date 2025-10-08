@@ -1,8 +1,7 @@
 import { MdOutlineEmail } from "react-icons/md";
 import { BsTelephone } from "react-icons/bs";
 import { SiGooglemaps } from "react-icons/si";
-import { FaInstagram } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin } from "react-icons/fa6";
 
 const Footer = () => {
 

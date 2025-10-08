@@ -20,14 +20,14 @@ const Cookies = () => {
             {!showBanner ? null :
 
 
-                <div className="fixed bottom-0 font-sans opacity-[.95] left-0 right-0 bg-white border-t border-stone-950 p-2 pt-3 shadow-lg flex flex-col lg:flex-row items-center justify-center z-50">
+                <div className="fixed bottom-0 font-sans opacity-[.95] left-0 right-0 bg-white/20 backdrop-blur-md border border-white/30 p-2 pt-3 shadow-lg flex flex-col lg:flex-row items-center justify-center z-50">
 
                     <p className="text-gray-800 text-sm md:text-sm lg:text-md mb-2 md:mb-0 mx-4 text-justify">
 
                         Utilizziamo solo cookie tecnici necessari al corretto funzionamento del sito.
 
                         Non raccogliamo dati tramite cookie di profilazione o analitici.{" "}
-                        <Link to="/privacy" className="text-blue-600 underline hover:text-blue-800">
+                        <Link to="/privacy" className="text-blue-800 underline hover:text-blue-800">
                             Consulta la nostra Cookie Policy
                         </Link>
                         .

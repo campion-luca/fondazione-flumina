@@ -30,17 +30,17 @@ const NavBar = () => {
         <div className="flex-shrink-0 font-bold flex items-center justify-center select-none py-4">
           <Link to="/">
             {/* <img src={logo_logo} alt="solo Logo fondazione" className="h-15 w-15 inline-block mr-2 cursor-pointer" /> */}
-            <img src={logo_scritta} alt="scritta fondazione flumina" className="h-9 w-72 inline-block mr-2" />
+            <img src={logo_scritta} alt="scritta fondazione flumina" className="h-9 w-80 inline-block mr-2" />
           </Link>
         </div>
 
         {/* Desktop Menu */}
         <div className="flex flex-col justify-start items-start md:pt-5 relative">
           <ol className="hidden md:flex font-medium select-none w-full justify-evenly shadow-[4px_0_10px_rgba(0,0,0,0.25)] px-4">
-            <li className="cursor-pointer pe-3 shadow-[4px_0_10px_rgba(0,0,0,0.25)]" onClick={() => toggleMenu('fondazione')}>La Fondazione</li>
-            <li className="cursor-pointer pe-3 shadow-[4px_0_10px_rgba(0,0,0,0.25)]" onClick={() => toggleMenu('eventi')}>Eventi</li>
-            <li className="cursor-pointer pe-3 shadow-[4px_0_10px_rgba(0,0,0,0.25)]" onClick={() => toggleMenu('about')}>Contatti</li>
-            <li className="cursor-pointer pe-3 " onClick={() => toggleMenu('home')}>Home</li>
+            <li className="cursor-pointer pe-3" onClick={() => toggleMenu('fondazione')}>La Fondazione</li>
+            <li className="cursor-pointer pe-3" onClick={() => toggleMenu('eventi')}>Eventi</li>
+            <li className="cursor-pointer pe-3" onClick={() => toggleMenu('about')}>Contatti</li>
+            <li className="cursor-pointer pe-3" onClick={() => toggleMenu('home')}>Home</li>
           </ol>
 
 
@@ -58,7 +58,7 @@ const NavBar = () => {
                 {openMenu === 'fondazione' && (
                   <>
                     <li className="cursor-pointer hover:underline">Chi siamo</li>
-                    <li className="cursor-pointer hover:underline">Il nostro presidente</li>
+                    <li className="cursor-pointer hover:underline"><Link to="/presidente">Il nostro presidente</Link></li>
                     <li className="cursor-pointer hover:underline"><Link to="/privacy">La nostra privacy</Link></li>
                     <li className="cursor-pointer hover:underline">Partner/Collaborazioni</li>
                   </>
@@ -111,10 +111,10 @@ const NavBar = () => {
               transition={{ duration: 0.4 }}
               className="md:hidden bg-primary px-2 pt-2 pb-3 space-y-1 select-none"
             >
-              <li className="block font-medium text-center text-gray-400 opacity-50 cursor-not-allowed">La Fondazione</li>
-              <li className="block font-medium text-center text-gray-400 opacity-50 cursor-not-allowed">Eventi</li>
-              <li className="block font-medium text-center text-gray-400 opacity-50 cursor-not-allowed">Contatti</li>
-              <li className="block font-medium text-center text-gray-400 opacity-50 cursor-not-allowed">Home</li>
+              <Link to="/presidente"><li className="block font-medium text-center">La Presidente</li></Link>
+              <Link to="/privacy"><li className="block font-medium text-center">Privacy/Cookies</li></Link>
+              <Link to="/"><li className="block font-medium text-center">Home</li></Link>
+              <li className="block font-medium text-center text-gray-400 opacity-50 cursor-not-allowed">Coming Soon..</li>
             </motion.ol>
           )}
         </AnimatePresence>

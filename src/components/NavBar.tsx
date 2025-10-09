@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 // import logo_logo from '../assets/solo_logo.png';
 import logo_scritta from '../assets/solo_scritta.png';
@@ -7,14 +7,40 @@ import HeroDecor from "../assets/HeroDecor";
 
 const NavBar = () => {
   const [alignStart, setAlignStart] = useState(true);
-  const [isOpen, setIsOpen] = useState(false);
 
   type MenuName = 'fondazione' | 'eventi' | 'about' | 'home';
   const [openMenu, setOpenMenu] = useState<MenuName | null>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
 
+  // Apre la tendina del menu richiesto/cliccato
   const toggleMenu = (menuName: MenuName) => {
     setAlignStart(!alignStart);
     setOpenMenu(openMenu === menuName ? null : menuName);
+  };
+
+  // Quando si seleziona un sottomenu toglie la tendina del menu
+  const toggleFocus = () => {
+    setAlignStart(!alignStart);
+    setOpenMenu(null);
+  };
+
+  // Chiude il menu cliccando fuori
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setOpenMenu(null); // chiude la tendina se il click è fuori
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Apertura sottomenu mobile
+  const [mobileOpenMenu, setMobileOpenMenu] = useState<MenuName | null>(null);
+  const toggleMobileMenu = (menuName: MenuName) => {
+    setMobileOpenMenu(mobileOpenMenu === menuName ? null : menuName);
   };
 
   return (
@@ -24,25 +50,30 @@ const NavBar = () => {
         <HeroDecor />
       </section>
 
-      <nav className="grid grid-cols-1 md:grid-cols-2 relative z-20 shadow-sm mt-4">
-
+      <nav
+        ref={menuRef}
+        className="grid grid-cols-1 md:grid-cols-2 relative z-20 shadow-sm mt-4 text-[#1b4a54]"
+      >
         {/* Logo */}
         <div className="flex-shrink-0 font-bold flex items-center justify-center select-none py-4">
           <Link to="/">
             {/* <img src={logo_logo} alt="solo Logo fondazione" className="h-15 w-15 inline-block mr-2 cursor-pointer" /> */}
-            <img src={logo_scritta} alt="scritta fondazione flumina" className="h-9 w-80 inline-block mr-2" />
+            <img
+              src={logo_scritta}
+              alt="scritta fondazione flumina"
+              className="h-9 w-80 inline-block mr-2"
+            />
           </Link>
         </div>
 
         {/* Desktop Menu */}
         <div className="flex flex-col justify-start items-start md:pt-5 relative">
           <ol className="hidden md:flex font-medium select-none w-full justify-evenly shadow-[4px_0_10px_rgba(0,0,0,0.25)] px-4">
+            <li className="cursor-pointer pe-3" onClick={() => toggleMenu('home')}>Home</li>
             <li className="cursor-pointer pe-3" onClick={() => toggleMenu('fondazione')}>La Fondazione</li>
             <li className="cursor-pointer pe-3" onClick={() => toggleMenu('eventi')}>Eventi</li>
             <li className="cursor-pointer pe-3" onClick={() => toggleMenu('about')}>Contatti</li>
-            <li className="cursor-pointer pe-3" onClick={() => toggleMenu('home')}>Home</li>
           </ol>
-
 
           {/* Dropdown Desktop Animato */}
           <AnimatePresence>
@@ -57,68 +88,109 @@ const NavBar = () => {
               >
                 {openMenu === 'fondazione' && (
                   <>
-                    <li className="cursor-pointer hover:underline">Chi siamo</li>
-                    <li className="cursor-pointer hover:underline"><Link to="/presidente">Il nostro presidente</Link></li>
-                    <li className="cursor-pointer hover:underline"><Link to="/privacy">La nostra privacy</Link></li>
-                    <li className="cursor-pointer hover:underline">Partner/Collaborazioni</li>
+                    <li className="cursor-pointer hover:underline" onClick={toggleFocus}>Chi siamo</li>
+                    <li className="cursor-pointer hover:underline" onClick={toggleFocus}>
+                      <Link to="/presidente">Il nostro presidente</Link>
+                    </li>
+                    <li className="cursor-pointer hover:underline" onClick={toggleFocus}>
+                      <Link to="/privacy">La nostra privacy</Link>
+                    </li>
+                    <li className="cursor-pointer hover:underline" onClick={toggleFocus}>Partner/Collaborazioni</li>
                   </>
                 )}
                 {openMenu === 'eventi' && (
                   <>
-                    <li className="cursor-pointer hover:underline">Album</li>
-                    <li className="cursor-pointer hover:underline">Archivio eventi</li>
-                    <li className="cursor-pointer hover:underline">News</li>
+                    <li className="cursor-pointer hover:underline" onClick={toggleFocus}>Album</li>
+                    <li className="cursor-pointer hover:underline" onClick={toggleFocus}>
+                      <Link to="/eventi">Archivio eventi</Link>
+                    </li>
+                    <li className="cursor-pointer hover:underline" onClick={toggleFocus}>News</li>
                   </>
                 )}
                 {openMenu === 'about' && (
-                  <li className="cursor-pointer hover:underline">Dove trovarci</li>
+                  <li className="cursor-pointer hover:underline" onClick={toggleFocus}>Dove trovarci</li>
                 )}
                 {openMenu === 'home' && (
-                  <li className="cursor-pointer hover:underline"><Link to="/">Torna alla pagina iniziale</Link></li>
+                  <li className="cursor-pointer hover:underline" onClick={toggleFocus}>
+                    <Link to="/">Torna alla pagina iniziale</Link>
+                  </li>
                 )}
               </motion.ul>
             )}
           </AnimatePresence>
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden flex justify-end items-center px-4 py-2 border-gray-200">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            type="button"
-            className="focus:outline-none cursor-pointer"
-          >
-            {isOpen ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
-        </div>
 
-        {/* Mobile Menu Animato */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.ol
-              key="mobile-menu"
-              initial={{ opacity: 0, height: 0, y: -10 }}
-              animate={{ opacity: 1, height: "auto", y: 0 }}
-              exit={{ opacity: 0, height: 0, y: -10 }}
-              transition={{ duration: 0.4 }}
-              className="md:hidden bg-primary px-2 pt-2 pb-3 space-y-1 select-none"
+
+        {/* -------------------------- Mobile Menu Button -------------------------- */}
+        <div className="md:hidden flex flex-col text-sm items-center">
+
+          {/* Bottone menu principale */}
+          <div className="flex justify-end items-center shadow-md pb-1 space-x-2">
+            <div
+              className="px-4 py-2 font-semibold cursor-pointer"
+              onClick={() => toggleMobileMenu('fondazione')}
             >
-              <Link to="/presidente"><li className="block font-medium text-center">La Presidente</li></Link>
-              <Link to="/privacy"><li className="block font-medium text-center">Privacy/Cookies</li></Link>
-              <Link to="/"><li className="block font-medium text-center">Home</li></Link>
-              <li className="block font-medium text-center text-gray-400 opacity-50 cursor-not-allowed">Coming Soon..</li>
-            </motion.ol>
-          )}
-        </AnimatePresence>
+              Fondazione
+            </div>
+            <div
+              className="px-4 py-2 font-semibold cursor-pointer"
+              onClick={() => toggleMobileMenu('eventi')}
+            >
+              Eventi
+            </div>
+            <div
+              className="px-4 py-2 font-semibold cursor-pointer"
+              onClick={() => toggleMobileMenu('about')}
+            >
+              Contatti
+            </div>
+            <div
+              className="px-4 py-2 font-semibold cursor-pointer"
+            >
+              <Link to='/'>
+                Home
+              </Link>
+            </div>
+          </div>
+
+          {/* Dropdown mobile animato */}
+          <AnimatePresence>
+            {mobileOpenMenu && (
+              <motion.ul
+                key={mobileOpenMenu}
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+                className="w-full shadow-lg mt-1 bg-white flex flex-col items-start text-sm font-medium"
+              >
+                {mobileOpenMenu === 'fondazione' && (
+                  <>
+                    <li className="px-4 py-2 w-full cursor-pointer hover:bg-gray-100" onClick={() => setMobileOpenMenu(null)}>
+                      <Link to="/chisiamo">Chi siamo</Link></li>
+                    <li className="px-4 py-2 w-full cursor-pointer hover:bg-gray-100">
+                      <Link to="/presidente" onClick={() => setMobileOpenMenu(null)}>Il nostro presidente</Link>
+                    </li>
+                    <li className="px-4 py-2 w-full cursor-pointer hover:bg-gray-100">
+                      <Link to="/privacy" onClick={() => setMobileOpenMenu(null)}>La nostra privacy</Link>
+                    </li>
+                  </>
+                )}
+                {mobileOpenMenu === 'eventi' && (
+                  <li className="px-4 py-2 w-full cursor-pointer hover:bg-gray-100">
+                    <Link to="/eventi" onClick={() => setMobileOpenMenu(null)}>Archivio eventi</Link>
+                  </li>
+                )}
+                {mobileOpenMenu === 'about' && (
+                  <li className="px-4 py-2 w-full cursor-pointer hover:bg-gray-100">Dove trovarci</li>
+                )}
+              </motion.ul>
+            )}
+          </AnimatePresence>
+        </div>
       </nav>
+
     </>
   );
 };

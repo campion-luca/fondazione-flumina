@@ -1,8 +1,15 @@
 import React from 'react';
+import cartinaSfondo from "../assets/cartina_4.png";
 
 const PrivacyPage: React.FC = () => {
   return (
-    <div className='min-h-screen flex flex-col'>
+    <div className='min-h-screen flex flex-col text-[#1b4a54]'
+      style={{
+        backgroundImage: `url(${cartinaSfondo})`,
+        backgroundSize: 'cover',       // scala per coprire tutto il div
+        backgroundPosition: 'center',  // centra l’immagine
+        backgroundRepeat: 'no-repeat',
+      }}>
 
       <div className="max-w-4xl mx-auto p-6 bg-white/30 backdrop-blur-md shadow-md rounded-lg mt-10">
 

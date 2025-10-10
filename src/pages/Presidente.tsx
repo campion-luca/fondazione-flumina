@@ -3,7 +3,7 @@ import cartinaSfondo from "../assets/cartina_3.png";
 
 const Presidente = () => {
     return (
-        <section className="bg-gradient-to-br from-white via-gray-50 to-gray-100 text-[#1b4a54] py-20 px-6 md:px-16 lg:px-32 text-base md:text-lg leading-relaxed min-h-screen"
+        <section className="bg-gradient-to-br from-white via-gray-50 to-gray-100 text-black py-20 px-6 md:px-16 lg:px-32 text-base md:text-lg leading-relaxed min-h-screen"
             style={{
                 backgroundImage: `url(${cartinaSfondo})`,
                 backgroundSize: 'cover',       // scala per coprire tutto il div

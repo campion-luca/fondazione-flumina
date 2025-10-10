@@ -43,6 +43,7 @@ const NavBar = () => {
     setMobileOpenMenu(mobileOpenMenu === menuName ? null : menuName);
   };
 
+
   return (
     <>
       {/* SVG */}

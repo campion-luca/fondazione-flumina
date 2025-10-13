@@ -1,6 +1,6 @@
-import logo from "../assets/solo_logo.png";
+import logo from "../assets/test.png";
 import Cookies from "../components/Cookies";
-// import Carosello from "../components/Carosello";
+import { Calendar } from "lucide-react";
 import cartinaSfondo from "../assets/cartina.png";
 import concertoOttoni from "../assets/ottoni_1.png";
 import { Link } from "react-router-dom";
@@ -21,7 +21,7 @@ const HomePage = () => {
 
 
             {/* HERO SECTION */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 max-w-7xl w-full">
+            <div className="grid grid-cols-3 max-w-7xl w-full mt-3">
 
 
                 {/* Logo */}
@@ -29,7 +29,7 @@ const HomePage = () => {
                     <img
                         src={logo}
                         alt="Logo Fondazione Flumina"
-                        className="h-48 md:h-72 lg:h-80 drop-shadow-xl"
+                        className="h-40 sm:h-55 md:h-72 lg:h-80 drop-shadow-xl md:ms-15 lg:me-25"
                     />
                 </div>
 
@@ -45,10 +45,26 @@ const HomePage = () => {
                         </span>
                     </h1>
 
-                    <div className="h-1 w-24 bg-[#2a7c8e] mt-6 rounded-full mx-auto lg:mx-0"></div>
+                    <div className="h-1 w-35 bg-[#2a7c8e] mt-6 rounded-full mx-auto lg:mx-0"></div>
                 </div>
             </div>
+
+
+
             {/* HERO END ---------------------------------------------------------------------------------------- */}
+
+
+            {/* Paragravo introduttivo */}
+            <div className="my-4 max-w-5xl mt-10 text-justify p-6 text-black">
+                <p>
+                    La <span className="font-semibold">Fondazione Flumina</span> nasce con l’obiettivo di promuovere il
+                    benessere collettivo e valorizzare il territorio del Polesine attraverso progetti culturali,
+                    formativi e di inclusione.
+                    <br /> <br />
+                    Opera per favorire l’equilibrio tra persona, comunità e impresa, sviluppando iniziative capaci di trasformare i bisogni
+                    reali in opportunità di crescita condivisa.
+                </p>
+            </div>
 
 
             {/* Tre cards introduttive */}
@@ -56,34 +72,32 @@ const HomePage = () => {
             <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
                 <div className="shadow-lg rounded-2xl p-6 hover:scale-105 transition">
                     <h3 className="text-xl font-semibold mb-2 text-black">Benessere collettivo</h3>
-                    <p className="text-gray-600">Promuoviamo iniziative che migliorano la qualità della vita e l’inclusione.</p>
+                    <p className="text-gray-600">Promuoviamo iniziative che favoriscono la collaborazione e il sostegno reciproco all’interno della comunità per rafforzare la coesione sociale.</p>
                 </div>
                 <div className="shadow-lg rounded-2xl p-6 hover:scale-105 transition">
                     <h3 className="text-xl font-semibold mb-2 text-black">Innovazione sociale</h3>
-                    <p className="text-gray-600">Sosteniamo progetti di welfare aziendale e innovazione territoriale.</p>
+                    <p className="text-gray-600">Promuoviamo soluzioni e pratiche condivise per rispondere in modo efficace ai cambiamenti del territorio.</p>
                 </div>
                 <div className="shadow-lg rounded-2xl p-6 hover:scale-105 transition">
                     <h3 className="text-xl font-semibold mb-2 text-black">Valorizzazione del territorio</h3>
-                    <p className="text-gray-600">Trasformiamo i bisogni in progettualità concrete che generano valore condiviso.</p>
+                    <p className="text-gray-600">Ascoltiamo i bisogni locali per generare valore duraturo e opportunità di crescita per la comunità polesana.</p>
                 </div>
             </div>
 
 
-            {/* Testo principale */}
+            {/* Testo approfondimento */}
             <div
-                className="max-w-5xl mt-10 text-justify p-6 rounded-3xl">
+                className="max-w-5xl mt-10 text-justify p-6">
                 <p className="text-base md:text-lg leading-relaxed text-black">
-                    <strong>Fondazione Flumina</strong> nasce a sostegno del benessere collettivo,
-                    promuovendo iniziative culturali, formative e di inclusione che favoriscono
-                    l’equilibrio tra impresa, persona e comunità.
+                    Ogni progetto della Fondazione nasce dall’ascolto e dal dialogo
+                    con il territorio, per generare valore autentico e duraturo.<br />
+                    Le azioni promosse spaziano da iniziative sociali e culturali, spesso realizzate in collaborazione con enti e associazioni
+                    locali, con l’obiettivo di rispondere in modo concreto ed efficace alle esigenze della comunità.
                     <br /><br />
-                    Opera con l’obiettivo di sviluppare progetti innovativi di welfare aziendale e per
-                    la promozione e valorizzazione territoriale.
-                    <br /><br />
-                    La Fondazione pone particolare attenzione alla crescita culturale e del tessuto
-                    sociale mettendo al centro delle proprie attività l’ascolto dei bisogni del
-                    territorio, trasformandoli in progettualità concrete capaci di generare valore
-                    condiviso.
+                    Il vero contributo della Fondazione non si esaurisce nei singoli progetti: risiede nella capacità di costruire relazioni,
+                    rafforzare il senso di appartenenza e stimolare l’espressione del potenziale di ciascuno.
+                    Con uno sguardo rivolto al futuro, Fondazione Flumina investe nella crescita di un Polesine più forte, vitale e capace di
+                    evolvere insieme.
                 </p>
             </div>
 
@@ -97,8 +111,20 @@ const HomePage = () => {
                         <div className="rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
                             <img src={concertoOttoni} alt="Evento 1" className="h-48 w-full object-cover" />
                             <div className="p-4">
+
+                                <div className="flex items-center gap-3">
+
+                                    <Calendar className="w-5 h-5 pb-1 text-gray-400 flex content-center" />
+                                    <p className="text-sm text-gray-400">
+                                        30 / settembre / 2025</p>
+                                </div>
+
+
                                 <h3 className="font-semibold text-lg">Concerto presso il tempio della rotonda</h3>
-                                <p className="text-gray-600 text-sm mt-2">In collaborazione con la croce rossa italiana</p>
+                                <p className="text-gray-700 text-sm mt-2">In collaborazione con la croce rossa italiana
+                                    <br />
+                                    <span className="text-blue-400">continua a leggere...</span></p>
+
                             </div>
                         </div>
                     </Link>

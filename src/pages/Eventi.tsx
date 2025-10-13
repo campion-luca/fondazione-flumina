@@ -1,7 +1,29 @@
-import { Calendar } from "lucide-react";
 import cartinaSfondo from "../assets/cartina_3.png";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { Calendar } from "lucide-react";
 
 const Eventi = () => {
+
+  // TIPIZZO IN QUANTO STO UTILIZZANDO TYPESCRIPT
+  interface Card {
+    id: number;
+    titolo: string;
+    contenuto: string;
+    immagine?: string; // opzionale
+    data: string;
+  }
+  const [cards, setCards] = useState<Card[]>([]);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch("/eventList.json")
+      .then((res) => res.json())
+      .then((data) => setCards(data))
+      .catch((err) => console.error("Errore nel caricamento JSON:", err));
+  }, []);
+
   return (
     <div style={{
       backgroundImage: `url(${cartinaSfondo})`,
@@ -12,57 +34,49 @@ const Eventi = () => {
     }}>
 
 
+
+      {/* LISTA EVENTI DINAMICA */}
       <div className="max-w-4xl mx-auto px-6 py-12 text-[#1b4a54]">
 
-        <h1 className="text-3xl font-bold text-center mb-6">
-          Eventi Passati
-        </h1>
+        <div className="cards-container">
 
-        <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
-          <div className="flex items-center gap-3 mb-4">
-            <Calendar className="w-6 h-6" />
-            <h2 className="text-2xl font-semibold">
-              Concerto di Solidarietà – Rovigo
-            </h2>
-          </div>
+          {cards.map((card) => (
+            <div
+              key={card.id}
+              className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group max-w-md mx-auto"
+            >
+              {card.immagine && (
+                <img
+                  src={card.immagine}
+                  alt={card.titolo}
+                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              )}
 
-          <p className="leading-relaxed mb-4">
-            Si è tenuto il concerto organizzato dalla{" "}
-            <span className="font-semibold">@crocerossarovigo</span> e dai{" "}
-            <span className="font-semibold">#Rotary</span> della provincia di Rovigo,
-            a sostegno dell’acquisto di un <span className="italic">carrello attrezzato</span> con motopompa e torre faro,
-            utile nelle emergenze legate al maltempo.
-          </p>
+              <div className="p-5">
+                <p className="text-gray-500 flex items-center"><Calendar className="w-5 h-5 me-1" />{card.data}</p>
+                <h3 className="text-xl font-bold text-[#1b4a54] mb-2 group-hover:text-blue-700 transition-colors">
+                  {card.titolo}
+                </h3>
 
-          <p className="leading-relaxed mb-4">
-            La <span className="font-semibold">Fondazione Flumina</span> ha contribuito
-            all’iniziativa, sottolineando il proprio impegno concreto a favore del territorio.
-            L’evento ha rappresentato anche la <span className="font-semibold">prima uscita pubblica</span>{" "}
-            della Presidente <span className="">Jessica Banin</span>, durante la quale ha condiviso
-            l’impegno della Fondazione per valorizzare e tutelare il Polesine.
-          </p>
+                <p className="text-gray-700 mb-3">
+                  {card.contenuto.length > 155 ? card.contenuto.slice(0, 155) + "..." : card.contenuto}
+                </p>
 
-          <div className="border-l-4 border-blue-300 pl-4 my-4">
-            <p className=" italic">
-              Presente anche <span className="font-semibold">Anna Momesso</span>, brand ambassador,
-              per condividere con il pubblico le principali aree di interesse della Fondazione.
-            </p>
-          </div>
+                <p className="text-blue-600 font-semibold group-hover:underline cursor-pointer" onClick={() => navigate(`/evento/${card.id}`)}>
+                  continua la lettura
+                </p>
+              </div>
+            </div>
+          ))}
 
-          <div className="flex items-center gap-2 mt-6">
-            <p>
-              Un caloroso plauso a tutti i musicisti del{" "}
-              <span className="font-semibold">Gruppo Ottoni del @conservatoriorovigo</span>,
-              diretti dal Maestro <span className="font-semibold">Fabiano Cudiz</span>, che hanno regalato
-              al pubblico una performance coinvolgente e memorabile.
-            </p>
-          </div>
-        </div>
 
-        <div className="mt-10 text-center text-gray-400">
-          <p>Altri eventi saranno presto disponibili...</p>
         </div>
       </div>
+
+
+
+
 
     </div>
   );

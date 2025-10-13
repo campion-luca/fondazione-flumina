@@ -4,6 +4,7 @@ import PrivacyPage from '../pages/PrivacyPage';
 import Presidente from '../pages/Presidente';
 import Eventi from '../pages/Eventi';
 import ChiSiamo from '../pages/ChiSiamo';
+import EventoDettaglio from '../pages/EventoDettaglio';
 
 const AppRoutes = () => (
     <Routes>
@@ -11,6 +12,7 @@ const AppRoutes = () => (
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/presidente" element={<Presidente />} />
         <Route path="/eventi" element={<Eventi />} />
+        <Route path="/evento/:id" element={<EventoDettaglio />} />
         <Route path="/chisiamo" element={<ChiSiamo />} />
     </Routes>
 )

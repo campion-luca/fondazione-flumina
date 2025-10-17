@@ -89,7 +89,8 @@ const NavBar = () => {
               >
                 {openMenu === 'fondazione' && (
                   <>
-                    <li className="cursor-pointer hover:underline" onClick={toggleFocus}>Chi siamo</li>
+                    <li className="cursor-pointer hover:underline" onClick={toggleFocus}>
+                      <Link to="/chisiamo">Chi siamo</Link></li>
                     <li className="cursor-pointer hover:underline" onClick={toggleFocus}>
                       <Link to="/presidente">Il nostro presidente</Link>
                     </li>
@@ -146,13 +147,14 @@ const NavBar = () => {
             >
               Contatti
             </div>
-            <div
-              className="px-4 py-2 font-semibold cursor-pointer"
-            >
-              <Link to='/'>
+
+            <Link to='/'>
+              <div
+                className="px-4 py-2 font-semibold cursor-pointer"
+              >
                 Home
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
 
           {/* Dropdown mobile animato */}
@@ -168,20 +170,27 @@ const NavBar = () => {
               >
                 {mobileOpenMenu === 'fondazione' && (
                   <>
-                    <li className="px-4 py-2 w-full cursor-pointer hover:bg-gray-100" onClick={() => setMobileOpenMenu(null)}>
-                      <Link to="/chisiamo">Chi siamo</Link></li>
-                    <li className="px-4 py-2 w-full cursor-pointer hover:bg-gray-100">
-                      <Link to="/presidente" onClick={() => setMobileOpenMenu(null)}>Il nostro presidente</Link>
-                    </li>
-                    <li className="px-4 py-2 w-full cursor-pointer hover:bg-gray-100">
-                      <Link to="/privacy" onClick={() => setMobileOpenMenu(null)}>La nostra privacy</Link>
-                    </li>
+                    <Link to="/chisiamo">
+                      <li className="px-4 py-2 w-full cursor-pointer hover:bg-gray-100" onClick={() => setMobileOpenMenu(null)}>
+                      </li>Chi siamo</Link>
+
+                    <Link to="/presidente">
+                      <li className="px-4 py-2 w-full cursor-pointer hover:bg-gray-100" onClick={() => setMobileOpenMenu(null)}>
+                        Il nostro presidente
+                      </li></Link>
+
+                    <Link to="/privacy">
+                      <li className="px-4 py-2 w-full cursor-pointer hover:bg-gray-100" onClick={() => setMobileOpenMenu(null)}>
+                        La nostra privacy
+                      </li></Link>
                   </>
                 )}
                 {mobileOpenMenu === 'eventi' && (
-                  <li className="px-4 py-2 w-full cursor-pointer hover:bg-gray-100">
-                    <Link to="/eventi" onClick={() => setMobileOpenMenu(null)}>Archivio eventi</Link>
-                  </li>
+
+                  <Link to="/eventi">
+                    <li className="px-4 py-2 w-full cursor-pointer hover:bg-gray-100" onClick={() => setMobileOpenMenu(null)}>
+                      Archivio eventi
+                    </li></Link>
                 )}
                 {mobileOpenMenu === 'about' && (
                   <li className="px-4 py-2 w-full cursor-pointer hover:bg-gray-100">Dove trovarci</li>

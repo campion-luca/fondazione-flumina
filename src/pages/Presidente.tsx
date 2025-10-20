@@ -1,5 +1,5 @@
-import fotoPresidente from "../assets/presidente.jpeg";
-import cartinaSfondo from "../assets/cartina_3.png";
+import fotoPresidente from "../assets/presidente/presidente.jpeg";
+import cartinaSfondo from "../assets/background/cartina_3.png";
 
 const Presidente = () => {
     return (

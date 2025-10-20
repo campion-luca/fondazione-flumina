@@ -11,7 +11,12 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
 
       {/* Tutta la pagina deve sempre ricoprire la grandezza dello schermo */}
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen"
+        style={{
+          paddingTop: "env(safe-area-inset-top)",
+          paddingBottom: "env(safe-area-inset-bottom)",
+        }}
+      >
         <NavBar />
 
         {/* il contenuto di app prenderà sempre gli spazi "vuoti" se presenti */}

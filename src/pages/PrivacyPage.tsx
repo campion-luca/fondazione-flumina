@@ -1,5 +1,5 @@
 import React from 'react';
-import cartinaSfondo from "../assets/cartina_4.png";
+import cartinaSfondo from "../assets/background/cartina_4.png";
 
 const PrivacyPage: React.FC = () => {
   return (

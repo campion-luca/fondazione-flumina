@@ -1,4 +1,4 @@
-import cartinaSfondo from "../assets/cartina_3.png";
+import cartinaSfondo from "../assets/background/cartina_3.png";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Calendar } from "lucide-react";
@@ -30,7 +30,7 @@ const Eventi = () => {
       backgroundSize: 'cover',       // scala per coprire tutto il div
       backgroundPosition: 'center',  // centra l’immagine
       backgroundRepeat: 'no-repeat',
-      minHeight: '100vh',
+      minHeight: '100dvh',
     }}>
 
 

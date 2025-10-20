@@ -1,8 +1,8 @@
-import logo from "../assets/test.png";
+import logo from "../assets/logo/test.png";
 import Cookies from "../components/Cookies";
 import { Calendar } from "lucide-react";
-import cartinaSfondo from "../assets/cartina.png";
-import concertoOttoni from "../assets/ottoni_1.png";
+import cartinaSfondo from "../assets/background/cartina.png";
+import concertoOttoni from "../assets/eventi/ottoni_1.png";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
@@ -55,7 +55,7 @@ const HomePage = () => {
 
 
             {/* Paragravo introduttivo */}
-            <div className="my-4 max-w-5xl mt-10 text-justify p-6 text-black">
+            <div className="my-4 max-w-5xl mt-10 text-justify p-6 text-black md:text-lg">
                 <p>
                     La <span className="font-semibold">Fondazione Flumina</span> nasce con l’obiettivo di promuovere il
                     benessere collettivo e valorizzare il territorio del Polesine attraverso progetti culturali,

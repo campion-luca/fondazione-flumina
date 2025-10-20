@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-// import logo_logo from '../assets/solo_logo.png';
-import logo_scritta from '../assets/solo_scritta.png';
+// import logo_logo from '../assets/logo/solo_logo.png';
+import logo_scritta from '../assets/logo/solo_scritta.png';
 import { Link } from "react-router-dom";
 import HeroDecor from "../assets/HeroDecor";
 
@@ -70,7 +70,12 @@ const NavBar = () => {
         {/* Desktop Menu */}
         <div className="flex flex-col justify-start items-start md:pt-5 relative">
           <ol className="hidden md:flex font-medium select-none w-full justify-evenly shadow-[4px_0_10px_rgba(0,0,0,0.25)] px-4">
-            <li className="cursor-pointer pe-3" onClick={() => toggleMenu('home')}>Home</li>
+            <li className="cursor-pointer pe-3">
+              <Link to='/'>
+              Home
+              </Link>
+
+              </li>
             <li className="cursor-pointer pe-3" onClick={() => toggleMenu('fondazione')}>La Fondazione</li>
             <li className="cursor-pointer pe-3" onClick={() => toggleMenu('eventi')}>Eventi</li>
             <li className="cursor-pointer pe-3" onClick={() => toggleMenu('about')}>Contatti</li>
@@ -111,11 +116,6 @@ const NavBar = () => {
                 )}
                 {openMenu === 'about' && (
                   <li className="cursor-pointer hover:underline" onClick={toggleFocus}>Dove trovarci</li>
-                )}
-                {openMenu === 'home' && (
-                  <li className="cursor-pointer hover:underline" onClick={toggleFocus}>
-                    <Link to="/">Torna alla pagina iniziale</Link>
-                  </li>
                 )}
               </motion.ul>
             )}

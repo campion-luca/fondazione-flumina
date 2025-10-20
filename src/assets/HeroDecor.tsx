@@ -44,37 +44,37 @@
 // }
 
 // HeroDecor.jsx
-export default function HeroDecor() {
-    return (
-        <svg
-            viewBox="0 0 600 800"
-            aria-hidden
-            style={{
-                position: "absolute",
-                top: "-180px",
-                left: "-80px",
-                width: "min(100vw, 1220px)",
-                height: "auto",
-                zIndex: 0,
-                pointerEvents: "none",
-            }}
-        >
-            <defs>
-                {/* Maschera cerchio per semicerchio */}
-                <mask id="semi">
-                    <rect width="100%" height="100%" fill="black" />
-                    <circle cx="220" cy="-40" r="380" fill="white" />
-                </mask>
-            </defs>
+    export default function HeroDecor() {
+        return (
+            <svg
+                viewBox="0 0 600 800"
+                aria-hidden
+                style={{
+                    position: "absolute",
+                    top: "-180px",
+                    left: "-80px",
+                    width: "min(100vw, 1220px)",
+                    height: "auto",
+                    zIndex: 0,
+                    pointerEvents: "none",
+                }}
+            >
+                <defs>
+                    {/* Maschera cerchio per semicerchio */}
+                    <mask id="semi">
+                        <rect width="100%" height="100%" fill="black" />
+                        <circle cx="220" cy="-40" r="380" fill="white" />
+                    </mask>
+                </defs>
 
-            {/* Rettangolo principale mono colore */}
-            <rect
-                width="100%"
-                height="100%"
-                fill="#440c0c" // colore unico del blocco
-                opacity="0.5"
-                mask="url(#semi)"
-            />
-        </svg>
-    );
-}
+                {/* Rettangolo principale mono colore */}
+                <rect
+                    width="100%"
+                    height="100%"
+                    fill="#440c0c" // colore unico del blocco
+                    opacity="0.5"
+                    mask="url(#semi)"
+                />
+            </svg>
+        );
+    }

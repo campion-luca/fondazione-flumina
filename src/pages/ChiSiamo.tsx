@@ -1,6 +1,6 @@
-import logo from "../assets/solo_logo.png";
+import logo from "../assets/logo/solo_logo.png";
 import Cookies from "../components/Cookies";
-import cartinaSfondo from "../assets/cartina_4.png";
+import cartinaSfondo from "../assets/background/cartina_4.png";
 
 const ChiSiamo = () => {
     return (

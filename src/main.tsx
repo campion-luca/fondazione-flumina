@@ -17,7 +17,7 @@ createRoot(document.getElementById('root')!).render(
         <NavBar />
 
         {/* il contenuto di app prenderà sempre gli spazi "vuoti" se presenti */}
-        <main className="flex-grow pt-20">
+        <main className="flex-grow pt-30 md:pt-25">
 
           <App />
 

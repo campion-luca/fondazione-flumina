@@ -57,7 +57,7 @@ const NavBar = () => {
             <img
               src={logo_scritta}
               alt="scritta fondazione flumina"
-              className="h-14 w-100 inline-block mr-2"
+              className="h-10 w-90 md:h-15 md:w-95 lg:h-15 lg:w-110 inline-block mr-2"
             />
           </Link>
         </div>

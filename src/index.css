@@ -1,1 +1,60 @@
 @import "tailwindcss";
+@import "@fontsource/montserrat";
+
+/* Font più simile a 'Universe' ma gratuito */
+@import '@fontsource-variable/work-sans/wght-italic.css';
+
+/* inutilizzato */
+@import '@fontsource/ubuntu';
+/* inutilizzato */
+@import '@fontsource-variable/playfair-display';
+
+
+:root {
+  font-family: "Work Sans Variable", "Montserrat", sans-serif;
+
+  font-synthesis: none;
+  /* Se un font non ha la versione bold o italic, il browser normalmente la “simula” (es. ispessisce o inclina il testo).
+  Con 'none' , blocchi questa simulazione: il testo verrà mostrato solo nelle varianti realmente fornite dal font. */
+
+  text-rendering: optimizeLegibility;
+  /* Migliora l’aspetto del testo, soprattutto nei titoli o font serif. */
+
+  -webkit-font-smoothing: antialiased;
+  /* Migliora la resa dei bordi dei caratteri (anti-aliasing), rendendo il testo più sottile e pulito su schermi ad alta risoluzione (come Retina). */
+
+  -moz-osx-font-smoothing: grayscale;
+  /* Imposta il rendering dei font in scala di grigi, migliorando l’uniformità del testo rispetto ad altri browser. */
+
+}
+
+html,
+body,
+#root {
+  /* margin: 0;
+  display: flex;
+  place-items: center; */
+  min-width: 320px;
+  min-height: 100vh;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+li {
+  position: relative;
+  cursor: pointer;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1.7px;
+  width: 0;
+  background: #1b4a54;
+  transition: all 0.3s ease;
+}
+
+li:hover::after {
+  width: 100%;
+}

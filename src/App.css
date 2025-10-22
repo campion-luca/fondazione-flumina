@@ -1,47 +1,7 @@
-@import "@fontsource/montserrat";
+/* Non obbligatorio, viene creato in automatico da 'Vite' */
+/* si può anche eliminare */
 
-html, body, #root {
-  height: 100%;
-  margin: 0;
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-}
 
-body {
-  font-family: "Montserrat", sans-serif;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+/* Globali (reset, font, variabili, tag base, utility Tailwind): index.css.
+	  Stili di un singolo componente: Tailwind utility direttamente nel JSX oppure CSS Module.
+	      App.css: opzionale. Se non lo usi, toglilo senza problemi.        */

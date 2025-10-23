@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-// import logo_logo from '../assets/logo/solo_logo.png';
 import logo_scritta from '../assets/logo/solo_scritta.png';
 import { Link } from "react-router-dom";
 
@@ -46,35 +45,32 @@ const NavBar = () => {
 
   return (
     <>
+      {/* Si dovrebbe rimpiazzare il logo "scritto" con un testo in bianco */}
+      {/* bg-[#1f3b45] text-white shadow-md */}
 
       <nav
         ref={menuRef}
-        className="fixed w-full grid grid-cols-1 md:grid-cols-2 text-[#1b4a54] shadow-md z-50 min-h-25 backdrop-blur-md bg-white/70"
-      >
+        className="fixed w-full grid grid-cols-1 md:grid-cols-2 z-50 text-[#1b4a54] shadow-md backdrop-blur-md bg-white/50 border-b-2 border-b-[#1b4a54]">
         {/* Logo */}
         <div className="flex-shrink-0 font-bold flex items-center justify-center select-none py-4">
           <Link to="/">
             <img
               src={logo_scritta}
               alt="scritta fondazione flumina"
-              className="h-10 w-90 md:h-15 md:w-95 lg:h-15 lg:w-110 inline-block mr-2"
+              className="h-10 w-85 md:h-15 md:w-95 lg:h-15 lg:w-110 inline-block mr-2"
             />
           </Link>
         </div>
 
-        {/* Desktop Menu */}
+        {/* Desktop Menu  */}
         <div className="flex flex-col justify-center items-start relative text-xl">
           <ol className="hidden md:flex font-medium select-none w-full justify-evenly">
-            <li className="cursor-pointer pe-3 px-3" onClick={() => setOpenMenu(null)}>
-              <Link to='/'>
-                Home
-              </Link>
-
-            </li>
+            <li className="cursor-pointer pe-3 px-3" onClick={() => setOpenMenu(null)}><Link to='/'>Home</Link></li>
             <li className="cursor-pointer pe-3" onClick={() => toggleMenu('fondazione')}>La Fondazione</li>
             <li className="cursor-pointer pe-3" onClick={() => toggleMenu('eventi')}>Eventi</li>
             <li className="cursor-pointer pe-3" onClick={() => toggleMenu('about')}>Contatti</li>
           </ol>
+
 
           {/* Dropdown Desktop Animato */}
           <AnimatePresence>
@@ -120,7 +116,7 @@ const NavBar = () => {
 
 
         {/* -------------------------- Mobile Menu Button -------------------------- */}
-        <div className="md:hidden flex flex-col text-sm items-center">
+        <div className="flex flex-col text-sm items-center md:hidden">
 
           {/* Bottone menu principale */}
           <div className="flex justify-end items-center pb-1 space-x-2">

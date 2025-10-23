@@ -37,7 +37,7 @@ const HomePage = () => {
                 {/* Testo */}
                 <div
                     className="flex flex-col justify-center items-center lg:items-start  col-span-2 text-left">
-                    <h1 className="font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+                    <h1 className="font-semibold text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
                         Ascoltiamo il <br />
                         territorio <br />
                         <span className="mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#2a7c8e] font-light">
@@ -45,12 +45,10 @@ const HomePage = () => {
                         </span>
                     </h1>
 
-                    <div className="h-1 w-45 bg-[#2a7c8e] mt-6 rounded-full mx-auto lg:mx-0"></div>
+
+                    <div className="h-1 w-45 bg-[#1b4a54] mt-6 rounded-full mx-auto lg:mx-0"></div>
                 </div>
             </div>
-
-
-
             {/* HERO END ---------------------------------------------------------------------------------------- */}
 
 

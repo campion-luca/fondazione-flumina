@@ -43,7 +43,7 @@ const PrivacyPage: React.FC = () => {
         </p>
 
         <p className="text-sm text-gray-500 mt-6">
-          Ultimo aggiornamento: 6 Ottobre 2025
+          Ultimo aggiornamento: 23 Ottobre 2025
         </p>
       </div>
 

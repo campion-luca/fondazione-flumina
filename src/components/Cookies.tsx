@@ -27,8 +27,8 @@ const Cookies = () => {
             {!showBanner ? null :
 
 
-                <div className="fixed bottom-0 left-0 right-0 font-sans bg-white/40 backdrop-blur-md 
-                border-t border-black p-2 pt-3 shadow-lg flex flex-col lg:flex-row items-center justify-center z-50">
+                <div className="fixed bottom-0 left-3 right-3 font-sans bg-white/40 backdrop-blur-md 
+                border border-black p-2 pt-3 shadow-lg flex flex-col lg:flex-row items-center justify-center z-50">
 
                     <p className="text-gray-800 text-sm md:text-sm lg:text-md mb-2 md:mb-0 mx-4 text-justify italic">
 

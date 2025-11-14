@@ -36,7 +36,7 @@ const Footer = () => {
                     <div className="mt-2 text-sm text-gray-300 flex justify-center order-2 sm:order-2 lg:order-3">
                         <ol className="flex lg:flex-col gap-4 sm:gap-4 lg:gap-1">
 
-                            <li className="pb-2 gap-1 flex items-center cursor-pointer"><a href="https://www.instagram.com/fondazione_flumina/" target="_blank" className="flex items-center gap-1">
+                            <li className="pb-2 gap-1 flex items-center cursor-pointer hover:underline"><a href="https://www.instagram.com/fondazione_flumina/" target="_blank" className="flex items-center gap-1">
                                 <FaInstagram />Instagram</a></li>
 
                             <li className="pb-2 gap-1 flex items-center text-gray-400 opacity-50 cursor-not-allowed"><FaLinkedin />Linkedin</li>

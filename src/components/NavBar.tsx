@@ -93,7 +93,7 @@ const NavBar = () => {
                     <li className="cursor-pointer" onClick={toggleFocus}>
                       <Link to="/privacy">La nostra privacy</Link>
                     </li>
-                    <li className="cursor-pointer" onClick={toggleFocus}>Partner/Collaborazioni</li>
+                    <li className="cursor-pointer text-gray-600/50" onClick={toggleFocus}>Partner/Collaborazioni</li>
                   </>
                 )}
                 {openMenu === 'eventi' && (
@@ -190,9 +190,10 @@ const NavBar = () => {
                     </li></Link>
                 )}
                 {mobileOpenMenu === 'about' && (
+                  <Link to="/contatti">
                   <li className="px-4 py-2 cursor-pointer hover:bg-gray-100" onClick={() => setMobileOpenMenu(null)}>
                     Dove trovarci
-                  </li>
+                  </li></Link>
                 )}
               </motion.ul>
             )}

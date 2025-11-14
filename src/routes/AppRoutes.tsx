@@ -5,6 +5,7 @@ import Presidente from '../pages/Presidente';
 import Eventi from '../pages/Eventi';
 import ChiSiamo from '../pages/ChiSiamo';
 import EventoDettaglio from '../pages/EventoDettaglio';
+import Contatti from '../pages/Contatti';
 
 const AppRoutes = () => (
     <Routes>
@@ -14,6 +15,7 @@ const AppRoutes = () => (
         <Route path="/eventi" element={<Eventi />} />
         <Route path="/evento/:id" element={<EventoDettaglio />} />
         <Route path="/chisiamo" element={<ChiSiamo />} />
+        <Route path='/contatti' element={<Contatti />} />
     </Routes>
 )
 export default AppRoutes;

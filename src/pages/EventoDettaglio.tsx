@@ -63,7 +63,7 @@ const EventoDettaglio: React.FC = () => {
                 <p className="text-sm text-gray-500 text-center mb-4">{evento.data}</p>
             )}
 
-            <p className="text-lg leading-relaxed whitespace-pre-line">
+            <p className="text-lg leading-relaxed whitespace-pre-line text-justify">
                 {evento.contenuto}
             </p>
         </div>

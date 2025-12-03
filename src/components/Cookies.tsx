@@ -27,8 +27,7 @@ const Cookies = () => {
             {!showBanner ? null :
 
 
-                <div className="fixed bottom-0 left-3 right-3 font-sans bg-white/40 backdrop-blur-md 
-                border border-black p-2 pt-3 shadow-lg flex flex-col lg:flex-row items-center justify-center z-50">
+                <div className="fixed bottom-0 rounded-sm left-3 right-3 font-sans bg-white/40 backdrop-blur-md border pb-3 pt-5 shadow-lg flex flex-col lg:flex-row items-center justify-center z-50">
 
                     <p className="text-gray-800 text-sm md:text-sm lg:text-md mb-2 md:mb-0 mx-4 text-justify italic">
 
@@ -38,29 +37,17 @@ const Cookies = () => {
                     </p>
 
                     <button onClick={handleAcceptCookies}
-                        className="btn relative w-full text-white px-2 py-1 cursor-pointer lg:w-50 text-xs md:text-xs inline-flex items-center justify-center overflow-hidden font-medium transition-all bg-[#1b4a54] hover:bg-white group cursor-pointer mb-2 lg:mb-0 lg:mr-4">
-                        <span className="
-                                        w-56 h-48 bg-[#989d6e] absolute top-0 left-0 
-                                        translate-y-[-100%] 
-                                        transition-transform ease-out duration-300   /* uscita veloce */
-                                        group-hover:translate-y-0 group-hover:duration-2000 /* entrata lenta */
-                                        "></span>
-                        <span className="relative w-full text-white transition-colors duration-300 ease-in-out group-hover:text-white">
-                            Accetto
-                        </span>
+                        className="btn w-5/6 rounded-sm text-white py-1 cursor-pointer lg:w-50 text-xs md:text-xs inline-flex items-center
+                        justify-center overflow-hidden font-medium transition-all bg-black cursor-pointer mb-2 lg:mb-0 lg:mr-4
+                        hover:bg-white hover:text-black transition duration-500 ease-in-out">
+                        Accettare
                     </button>
 
                     <button onClick={handleOpenCookiePolicy}
-                        className="btn relative w-full text-white px-2 py-1 cursor-pointer lg:w-50 text-xs md:text-xs inline-flex items-center justify-center overflow-hidden font-medium transition-all bg-[#268292] hover:bg-white group cursor-pointer">
-                        <span className="
-                                        w-56 h-48 bg-[#989d6e] absolute top-0 left-0 
-                                        translate-y-[-100%] 
-                                        transition-transform ease-out duration-300   /* uscita veloce */
-                                        group-hover:translate-y-0 group-hover:duration-2000 /* entrata lenta */
-                                        "></span>
-                        <span className="relative w-full text-white transition-colors duration-300 ease-in-out group-hover:text-white">
-                            Consulta la nostra Cookie Policy
-                        </span>
+                        className="btn w-5/6 rounded-sm text-black px-2 py-1 cursor-pointer lg:w-50 text-xs md:text-xs inline-flex items-center 
+                        justify-center overflow-hidden font-medium transition-all bg-white cursor-pointer
+                        hover:bg-black hover:text-white transition duration-500 ease-in-out">
+                        Consulta la nostra Cookie Policy
                     </button>
 
 

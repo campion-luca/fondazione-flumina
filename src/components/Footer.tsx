@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3">
 
                     {/* Contatti */}
-                    <div className="mt-2 text-end text-sm text-gray-300 flex items-center justify-center flex-col order-1 sm:order-1 lg:order-1">
+                    <div className="mt-2 text-end text-xs text-gray-300 flex items-center justify-center flex-col order-1 sm:order-1 lg:order-1">
                         <ol className="list-none">
 
                             <li className="pb-2 gap-1 flex items-center"><a href="mailto:segreteria@fondazioneflumina.it" className="hover:underline flex items-center gap-1">
@@ -33,7 +33,7 @@ const Footer = () => {
                     </div>
 
                     {/* Social */}
-                    <div className="mt-2 text-sm text-gray-300 flex justify-center order-2 sm:order-2 lg:order-3">
+                    <div className="mt-2 text-xs text-gray-300 flex justify-center order-2 sm:order-2 lg:order-3">
                         <ol className="flex lg:flex-col gap-4 sm:gap-4 lg:gap-1">
 
                             <li className="pb-2 gap-1 flex items-center cursor-pointer hover:underline"><a href="https://www.instagram.com/fondazione_flumina/" target="_blank" className="flex items-center gap-1">

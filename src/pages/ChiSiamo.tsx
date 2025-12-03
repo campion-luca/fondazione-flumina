@@ -1,4 +1,4 @@
-import logo from "../assets/logo/solo_logo.png";
+import logo from "../assets/logo/logo_nuovo.png";
 import Cookies from "../components/Cookies";
 import cartinaSfondo from "../assets/background/cartina_4.png";
 
@@ -22,7 +22,7 @@ const ChiSiamo = () => {
                     <img
                         src={logo}
                         alt="Logo Fondazione Flumina"
-                        className="h-48 md:h-72 lg:h-80 drop-shadow-xl"
+                        className="h-48 md:h-72 lg:h-80 drop-shadow-xl lg:me-25 lg:mt-5"
                     />
                 </div>
 

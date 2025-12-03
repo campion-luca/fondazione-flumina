@@ -1,7 +1,6 @@
-import logo from "../assets/logo/test.png";
+import logo from "../assets/logo/logo_nuovo.png";
 import Cookies from "../components/Cookies";
 import { Calendar } from "lucide-react";
-import cartinaSfondo from "../assets/background/cartina.png";
 import concertoOttoni from "../assets/eventi/ottoni_1.png";
 import { Link } from "react-router-dom";
 
@@ -9,13 +8,7 @@ const HomePage = () => {
 
     return (
 
-        <div className="flex flex-col items-center justify-center min-h-screen text-[#1b4a54] px-6"
-            style={{
-                backgroundImage: `url(${cartinaSfondo})`,
-                backgroundSize: 'cover',       // scala per coprire tutto il div
-                backgroundPosition: 'center',  // centra l’immagine
-                backgroundRepeat: 'no-repeat',  // non ripete l'immagine
-            }}>
+        <div className="flex flex-col items-center justify-center min-h-screen text-[#1b4a54] px-6">
 
             {/* bg-gradient-to-b from-[#f4f9fa] to-[#e9f2f3] ---> gradiente background precedente */}
 
@@ -29,7 +22,7 @@ const HomePage = () => {
                     <img
                         src={logo}
                         alt="Logo Fondazione Flumina"
-                        className="h-40 sm:h-55 md:h-72 lg:h-80 drop-shadow-xl md:ms-15 lg:me-25"
+                        className="h-40 sm:h-55 md:h-72 lg:h-80 drop-shadow-xl md:ms-15 lg:me-25 lg:mt-5"
                     />
                 </div>
 
@@ -53,7 +46,7 @@ const HomePage = () => {
 
 
             {/* Paragravo introduttivo */}
-            <div className="my-4 max-w-5xl mt-10 text-justify p-6 text-black md:text-lg">
+            <div className="my-4 max-w-5xl mt-10 text-justify p-6 text-black md:text-md">
                 <p>
                     La <span className="font-semibold">Fondazione Flumina</span> nasce con l’obiettivo di promuovere il
                     benessere collettivo e valorizzare il territorio del Polesine attraverso progetti culturali,
@@ -68,17 +61,17 @@ const HomePage = () => {
             {/* Tre cards introduttive */}
 
             <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
-                <div className="shadow-lg rounded-2xl p-6 hover:scale-105 transition">
+                <div className="shadow-xl rounded-sm p-5 hover:scale-105 cursor-pointer transition bg-white/10 backdrop-blur-md">
                     <h3 className="text-xl font-semibold mb-2 text-black">Benessere collettivo</h3>
-                    <p className="text-gray-600 italic">Promuoviamo iniziative che favoriscono la collaborazione e il sostegno reciproco all’interno della comunità per rafforzare la coesione sociale.</p>
+                    <p className="text-gray-600 italic text-sm">Promuoviamo iniziative che favoriscono la collaborazione e il sostegno reciproco all’interno della comunità per rafforzare la coesione sociale.</p>
                 </div>
-                <div className="shadow-lg rounded-2xl p-6 hover:scale-105 transition">
+                <div className="shadow-xl rounded-sm p-5 hover:scale-105 cursor-pointer transition bg-white/10 backdrop-blur-md">
                     <h3 className="text-xl font-semibold mb-2 text-black">Innovazione sociale</h3>
-                    <p className="text-gray-600 italic">Promuoviamo soluzioni e pratiche condivise per rispondere in modo efficace ai cambiamenti del territorio.</p>
+                    <p className="text-gray-600 italic text-sm">Promuoviamo soluzioni e pratiche condivise per rispondere in modo efficace ai cambiamenti del territorio.</p>
                 </div>
-                <div className="shadow-lg rounded-2xl p-6 hover:scale-105 transition">
+                <div className="shadow-xl rounded-sm p-5 hover:scale-105 cursor-pointer transition bg-white/10 backdrop-blur-md">
                     <h3 className="text-xl font-semibold mb-2 text-black">Valorizzazione del territorio</h3>
-                    <p className="text-gray-600 italic">Ascoltiamo i bisogni locali per generare valore duraturo e opportunità di crescita per la comunità polesana.</p>
+                    <p className="text-gray-600 italic text-sm">Ascoltiamo i bisogni locali per generare valore duraturo e opportunità di crescita per la comunità polesana.</p>
                 </div>
             </div>
 
@@ -86,7 +79,7 @@ const HomePage = () => {
             {/* Testo approfondimento */}
             <div
                 className="max-w-5xl mt-10 text-justify p-6">
-                <p className="text-base md:text-lg leading-relaxed text-black">
+                <p className="text-base md:text-md leading-relaxed text-black">
                     Ogni progetto della Fondazione nasce dall’ascolto e dal dialogo
                     con il territorio, per generare valore autentico e duraturo.<br />
                     Le azioni promosse spaziano da iniziative sociali e culturali, spesso realizzate in collaborazione con enti e associazioni
@@ -105,27 +98,31 @@ const HomePage = () => {
 
 
                 <div className="grid md:grid-cols-3 gap-8">
-                    <Link to="/eventi">
-                        <div className="rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
-                            <img src={concertoOttoni} alt="Evento 1" className="h-48 w-full object-cover" />
-                            <div className="p-4">
 
-                                <div className="flex items-center gap-3">
+                    <div className="rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                        <img src={concertoOttoni} alt="Evento 1" className="h-48 w-full object-cover" />
+                        <div className="p-4">
 
-                                    <Calendar className="w-5 h-5 pb-1 text-gray-400 flex content-center" />
-                                    <p className="text-sm text-gray-400">
-                                        30 / settembre / 2025</p>
-                                </div>
+                            <div className="flex items-center gap-3">
 
-
-                                <h3 className="font-semibold text-lg">Concerto presso il tempio della rotonda</h3>
-                                <p className="text-gray-700 text-sm mt-2">In collaborazione con la croce rossa italiana
-                                    <br />
-                                    <span className="text-blue-400">continua a leggere...</span></p>
-
+                                <Calendar className="w-5 h-5 pb-1 text-gray-400 flex content-center" />
+                                <p className="text-xs text-gray-400">
+                                    30 / settembre / 2025</p>
                             </div>
+
+
+                            <h3 className="font-semibold text-lg">Concerto presso il tempio della rotonda</h3>
+                            <p className="text-gray-700 text-sm mt-2">In collaborazione con la croce rossa italiana
+                                <br />
+                                
+                                {/* Collegamento diretto alle info dell'evento stesso */}
+                                <Link to="/evento/1">
+                                    <span className="text-blue-400">continua a leggere...</span>
+                                </Link></p>
+
                         </div>
-                    </Link>
+                    </div>
+
                     {/* Ripeti per altri 2 eventi */}
                 </div>
 

@@ -50,14 +50,14 @@ const NavBar = () => {
 
       <nav
         ref={menuRef}
-        className="fixed w-full grid grid-cols-1 md:grid-cols-2 z-50 text-[#1b4a54] shadow-md backdrop-blur-md bg-white/50 border-b-2 border-b-[#1b4a54]">
+        className="fixed w-full grid grid-cols-1 md:grid-cols-2 z-50 text-[#1b4a54] shadow-md backdrop-blur-md bg-white/50 border-b-1 border-b-[#1b4a54]">
         {/* Logo */}
         <div className="flex-shrink-0 font-bold flex items-center justify-center select-none py-4">
           <Link to="/">
             <img
               src={logo_scritta}
               alt="scritta fondazione flumina"
-              className="h-10 w-85 md:h-15 md:w-95 lg:h-15 lg:w-110 inline-block mr-2"
+              className="h-10 w-85 md:h-15 md:w-95 lg:h-13 lg:w-110 inline-block mr-2"
             />
           </Link>
         </div>
@@ -65,10 +65,10 @@ const NavBar = () => {
         {/* Desktop Menu  */}
         <div className="flex flex-col justify-center items-start relative text-xl">
           <ol className="hidden md:flex font-medium select-none w-full justify-evenly">
-            <li className="cursor-pointer pe-3 px-3" onClick={() => setOpenMenu(null)}><Link to='/'>Home</Link></li>
-            <li className="cursor-pointer pe-3" onClick={() => toggleMenu('fondazione')}>La Fondazione</li>
-            <li className="cursor-pointer pe-3" onClick={() => toggleMenu('eventi')}>Eventi</li>
-            <li className="cursor-pointer pe-3" onClick={() => toggleMenu('about')}>Contatti</li>
+            <li className="cursor-pointer px-3" onClick={() => setOpenMenu(null)}><Link to='/'>Home</Link></li>
+            <li className="cursor-pointer" onClick={() => toggleMenu('fondazione')}>La Fondazione</li>
+            <li className="cursor-pointer" onClick={() => toggleMenu('eventi')}>Eventi</li>
+            <li className="cursor-pointer" onClick={() => toggleMenu('about')}>Contatti</li>
           </ol>
 
 
@@ -81,7 +81,8 @@ const NavBar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
-                className="absolute top-full left-0 w-full shadow-lg md:flex justify-around items-center space-x-6 font-medium py-3 z-30 text-sm"
+                className="absolute top-full left-0 w-full shadow-lg md:flex justify-around items-center space-x-6 font-medium py-3 z-30 
+                text-sm shadow-md backdrop-blur-md bg-white/50 border-b-1 border-l-1"
               >
                 {openMenu === 'fondazione' && (
                   <>
@@ -162,7 +163,7 @@ const NavBar = () => {
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3 }}
-                className="w-full shadow-lg mt-1 bg-white flex flex-col items-start text-xs font-medium"
+                className="w-full shadow-lg mt-1 flex flex-col items-start text-xs font-medium"
               >
                 {mobileOpenMenu === 'fondazione' && (
                   <>
@@ -191,9 +192,9 @@ const NavBar = () => {
                 )}
                 {mobileOpenMenu === 'about' && (
                   <Link to="/contatti">
-                  <li className="px-4 py-2 cursor-pointer hover:bg-gray-100" onClick={() => setMobileOpenMenu(null)}>
-                    Dove trovarci
-                  </li></Link>
+                    <li className="px-4 py-2 cursor-pointer hover:bg-gray-100" onClick={() => setMobileOpenMenu(null)}>
+                      Dove trovarci
+                    </li></Link>
                 )}
               </motion.ul>
             )}

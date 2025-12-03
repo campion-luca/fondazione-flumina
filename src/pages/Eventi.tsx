@@ -5,6 +5,10 @@ import { Calendar } from "lucide-react";
 
 const Eventi = () => {
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   // TIPIZZO IN QUANTO STO UTILIZZANDO TYPESCRIPT
   interface Card {
     id: number;
@@ -24,6 +28,7 @@ const Eventi = () => {
       .catch((err) => console.error("Errore nel caricamento JSON:", err));
   }, []);
 
+  
   return (
     <div style={{
       backgroundImage: `url(${cartinaSfondo})`,

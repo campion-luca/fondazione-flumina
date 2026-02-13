@@ -43,6 +43,7 @@ body,
   background-position: center;
   background-repeat: no-repeat;
 }
+
 /* 
   backgroundImage: `url(${cartinaSfondo})`,
   backgroundSize: 'cover',       // scala per coprire tutto il div
@@ -69,4 +70,13 @@ li::after {
 
 li:hover::after {
   width: 100%;
+}
+
+/* Stile per elementi disabilitati */
+li.cursor-not-allowed {
+  cursor: not-allowed !important;
+}
+
+li.cursor-not-allowed::after {
+  display: none;
 }

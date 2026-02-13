@@ -28,7 +28,7 @@ const Eventi = () => {
       .catch((err) => console.error("Errore nel caricamento JSON:", err));
   }, []);
 
-  
+
   return (
     <div style={{
       backgroundImage: `url(${cartinaSfondo})`,
@@ -41,14 +41,14 @@ const Eventi = () => {
 
 
       {/* LISTA EVENTI DINAMICA */}
-      <div className="max-w-4xl mx-auto px-6 py-12 text-[#1b4a54]">
+      <div className="max-w-7xl mx-auto px-6 py-12 text-[#1b4a54]">
 
-        <div className="cards-container">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {cards.map((card) => (
             <div
               key={card.id}
-              className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group max-w-md mx-auto"
+              className="bg-white shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
             >
               {card.immagine && (
                 <img

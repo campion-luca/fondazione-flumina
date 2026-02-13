@@ -3,8 +3,20 @@
         "id": 1,
         "titolo": "Concerto di Solidarietà – Rovigo",
         "contenuto": "Si è tenuto il concerto organizzato dalla @crocerossarovigo e dai #Rotary della provincia di Rovigo, a sostegno dell’acquisto di un carrello attrezzato con motopompa e torre faro, utile nelle emergenze legate al maltempo. La Fondazione Flumina ha contribuito all’iniziativa, sottolineando il proprio impegno concreto a favore del territorio. L’evento ha rappresentato anche la prima uscita pubblica della Presidente Jessica Banin, durante la quale ha condiviso l’impegno della Fondazione per valorizzare e tutelare il Polesine. Presente anche Anna Momesso, brand ambassador, per condividere con il pubblico le principali aree di interesse della Fondazione. Un caloroso plauso a tutti i musicisti del Gruppo Ottoni del @conservatoriorovigo, diretti dal Maestro Fabiano Cudiz, che hanno regalato al pubblico una performance coinvolgente e memorabile.",
-        "immagine": "/img/ottoni_1.png",
-        "galleria": ["/img/ottoni_1.png"],
+        "immagine": "/img/eventi/concertosolidarieta.png",
+        "galleria": [
+            "/img/eventi/concertosolidarieta.png"
+        ],
         "data": "30 / settembre / 2025 "
+    },
+    {
+        "id": 2,
+        "titolo": "Teatro Sociale Eugenio Balzan",
+        "contenuto": "La nuova stagione del Teatro Balzan è già entrata nel vivo con due spettacoli che hanno inaugurato un programma ricco di emozioni tra musica e teatro: From Broadway With Love con l’Orchestra I Filarmonici Veneti e I Promessi Sposi – Opera Moderna. 🎶🎭 La Fondazione Flumina è tra i soci del teatro: una scelta che nasce dal desiderio di sostenere la cultura e valorizzare il nostro territorio. 🌿",
+        "immagine": "/img/eventi/teatrosociale.jpg",
+        "galleria": [
+            "/img/eventi/teatrosociale.jpg"
+        ],
+        "data": "06 / ottobre / 2025 "
     }
 ]

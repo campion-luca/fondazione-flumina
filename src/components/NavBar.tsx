@@ -50,9 +50,9 @@ const NavBar = () => {
 
       <nav
         ref={menuRef}
-        className="fixed w-full grid grid-cols-1 md:grid-cols-2 z-50 text-[#1b4a54] shadow-md backdrop-blur-md bg-white/50 border-b-1 border-b-[#1b4a54]">
+        className="fixed w-full grid grid-cols-1 md:grid-cols-2 z-50 text-[#1b4a54] shadow-md backdrop-blur-md bg-white/50 border-b border-b-[#1b4a54]">
         {/* Logo */}
-        <div className="flex-shrink-0 font-bold flex items-center justify-center select-none py-4">
+        <div className="shrink-0 font-bold flex items-center justify-center select-none py-4">
           <Link to="/">
             <img
               src={logo_scritta}
@@ -68,7 +68,7 @@ const NavBar = () => {
             <li className="cursor-pointer px-3" onClick={() => setOpenMenu(null)}><Link to='/'>Home</Link></li>
             <li className="cursor-pointer" onClick={() => toggleMenu('fondazione')}>La Fondazione</li>
             <li className="cursor-pointer" onClick={() => toggleMenu('eventi')}>Eventi</li>
-            <li className="cursor-pointer" onClick={() => toggleMenu('about')}>Contatti</li>
+            {/* <li className="cursor-pointer" onClick={() => toggleMenu('about')}>Contatti</li> */}
           </ol>
 
 
@@ -81,8 +81,8 @@ const NavBar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
-                className="absolute top-full left-0 w-full shadow-lg md:flex justify-around items-center space-x-6 font-medium py-3 z-30 
-                text-sm shadow-md backdrop-blur-md bg-white/50 border-b-1 border-l-1"
+                className="absolute top-full left-0 w-full md:flex justify-around items-center space-x-6 font-medium py-3 z-30 
+                text-sm shadow-md backdrop-blur-md bg-white/50 border-b border-l"
               >
                 {openMenu === 'fondazione' && (
                   <>
@@ -99,11 +99,10 @@ const NavBar = () => {
                 )}
                 {openMenu === 'eventi' && (
                   <>
-                    <li className="cursor-pointer" onClick={toggleFocus}>Album</li>
+                    <li className="text-gray-400 cursor-not-allowed">Album</li>
                     <li className="cursor-pointer" onClick={toggleFocus}>
                       <Link to="/eventi">Archivio eventi</Link>
                     </li>
-                    <li className="cursor-pointer" onClick={toggleFocus}>News</li>
                   </>
                 )}
                 {openMenu === 'about' && (
@@ -144,12 +143,12 @@ const NavBar = () => {
             >
               Eventi
             </div>
-            <div
+            {/* <div
               className="px-4 py-2 font-semibold cursor-pointer"
               onClick={() => toggleMobileMenu('about')}
             >
               Contatti
-            </div>
+            </div> */}
 
 
           </div>
@@ -190,12 +189,12 @@ const NavBar = () => {
                       Archivio eventi
                     </li></Link>
                 )}
-                {mobileOpenMenu === 'about' && (
+                {/* {mobileOpenMenu === 'about' && (
                   <Link to="/contatti">
                     <li className="px-4 py-2 cursor-pointer hover:bg-gray-100" onClick={() => setMobileOpenMenu(null)}>
                       Dove trovarci
                     </li></Link>
-                )}
+                )} */}
               </motion.ul>
             )}
           </AnimatePresence>

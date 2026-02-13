@@ -1,10 +1,32 @@
 import logo from "../assets/logo/logo_nuovo.png";
 import Cookies from "../components/Cookies";
 import { Calendar } from "lucide-react";
-import concertoOttoni from "../assets/eventi/ottoni_1.png";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const HomePage = () => {
+
+    // TIPIZZO IN QUANTO STO UTILIZZANDO TYPESCRIPT
+    interface Card {
+        id: number;
+        titolo: string;
+        contenuto: string;
+        immagine?: string; // opzionale
+        data: string;
+    }
+
+    const [cards, setCards] = useState<Card[]>([]);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        fetch("/eventList.json")
+            .then((res) => res.json())
+            .then((data) => setCards(data))
+            .catch((err) => console.error("Errore nel caricamento JSON:", err));
+    }, []);
+
+    // Prendo solo le ultime 3 card
+    const ultimeCard = cards.slice(-3).reverse();
 
     return (
 
@@ -96,34 +118,31 @@ const HomePage = () => {
             <div className="max-w-6xl mx-auto px-6">
                 <h2 className="text-3xl font-semibold text-center mb-10 text-[#1a3a3f]">Ultimi eventi in tendenza</h2>
 
-
                 <div className="grid md:grid-cols-3 gap-8">
+                    {ultimeCard.map((card) => (
+                        <div
+                            key={card.id}
+                            className="shadow-md overflow-hidden hover:shadow-xl transition cursor-pointer"
+                            onClick={() => navigate(`/evento/${card.id}`)}
+                        >
+                            {card.immagine && (
+                                <img src={card.immagine} alt={card.titolo} className="h-48 w-full object-cover" />
+                            )}
+                            <div className="p-4">
+                                <div className="flex items-center gap-3">
+                                    <Calendar className="w-5 h-5 pb-1 text-gray-400 flex content-center" />
+                                    <p className="text-xs text-gray-400">{card.data}</p>
+                                </div>
 
-                    <div className="rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
-                        <img src={concertoOttoni} alt="Evento 1" className="h-48 w-full object-cover" />
-                        <div className="p-4">
-
-                            <div className="flex items-center gap-3">
-
-                                <Calendar className="w-5 h-5 pb-1 text-gray-400 flex content-center" />
-                                <p className="text-xs text-gray-400">
-                                    30 / settembre / 2025</p>
-                            </div>
-
-
-                            <h3 className="font-semibold text-lg">Concerto presso il tempio della rotonda</h3>
-                            <p className="text-gray-700 text-sm mt-2">In collaborazione con la croce rossa italiana
-                                <br />
-                                
-                                {/* Collegamento diretto alle info dell'evento stesso */}
-                                <Link to="/evento/1">
+                                <h3 className="font-semibold text-lg">{card.titolo}</h3>
+                                <p className="text-gray-700 text-sm mt-2">
+                                    {card.contenuto.length > 100 ? card.contenuto.slice(0, 100) + "..." : card.contenuto}
+                                    <br />
                                     <span className="text-blue-400">continua a leggere...</span>
-                                </Link></p>
-
+                                </p>
+                            </div>
                         </div>
-                    </div>
-
-                    {/* Ripeti per altri 2 eventi */}
+                    ))}
                 </div>
 
             </div>

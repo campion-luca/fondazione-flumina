@@ -1,4 +1,4 @@
-[
+ [
     {
         "id": 1,
         "titolo": "Concerto di Solidarietà – Rovigo",
@@ -18,5 +18,15 @@
             "/img/eventi/teatrosociale.jpg"
         ],
         "data": "06 / ottobre / 2025 "
+    },
+    {
+        "id": 3,
+        "titolo": "La consegna del carrello attrezzato alla Croce Rossa di Rovigo",
+        "contenuto": "Con la consegna del nuovo carrello per le emergenze 🚨 alla @CroceRossaRovigo si è realizzato il progetto nato dalla collaborazione tra #Rotary di Rovigo e #FondazioneFlumina, uniti dal desiderio di offrire un aiuto tangibile al territorio. 🤝 Il carrello, dotato di motopompa, torre faro, generatore e attrezzature per la sicurezza dei volontari, 🦺 sarà un prezioso supporto in caso di allagamenti e altre situazioni di emergenza. Un gesto concreto per sostenere chi ogni giorno si impegna per #unitaliacheaiuta ❤️ #FondazioneFlumina #solidarietà #emergenza #territorio",
+        "immagine": "/img/eventi/carrello_cri.jpeg",
+        "galleria": [
+            "/img/eventi/carrello_cri.jpeg"
+        ],
+        "data": "08 / novembre / 2025 "
     }
 ]

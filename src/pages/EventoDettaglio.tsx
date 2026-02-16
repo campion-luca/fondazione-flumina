@@ -55,7 +55,7 @@ const EventoDettaglio: React.FC = () => {
                 <img
                     src={evento.immagine}
                     alt={evento.titolo}
-                    className="w-full rounded-2xl shadow-md mb-8"
+                    className="w-full max-w-2xl mx-auto h-auto max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover rounded-2xl shadow-md mb-8"
                 />
             )}
 

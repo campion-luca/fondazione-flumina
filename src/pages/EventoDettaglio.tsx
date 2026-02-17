@@ -1,4 +1,4 @@
-// import { Calendar } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -6,7 +6,8 @@ interface Evento {
     id: number;
     titolo: string;
     contenuto: string;
-    immagine?: string; // opzionale
+    immagine?: string;
+    galleria?: string[];
     data: string;
 }
 
@@ -15,6 +16,7 @@ const EventoDettaglio: React.FC = () => {
 
     const [evento, setEvento] = useState<Evento | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
+    const [slideIndex, setSlideIndex] = useState(0);
 
     useEffect(() => {
         const fetchEvento = async () => {
@@ -51,13 +53,48 @@ const EventoDettaglio: React.FC = () => {
 
             <h1 className="text-4xl font-bold mb-6 text-center">{evento.titolo}</h1>
 
-            {evento.immagine && (
-                <img
-                    src={evento.immagine}
-                    alt={evento.titolo}
-                    className="w-full max-w-2xl mx-auto h-auto max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover rounded-2xl shadow-md mb-8"
-                />
-            )}
+            {(() => {
+                const immagini = evento.galleria && evento.galleria.length > 0
+                    ? evento.galleria
+                    : evento.immagine ? [evento.immagine] : [];
+                if (immagini.length === 0) return null;
+                return (
+                    <div className="relative w-full max-w-2xl mx-auto mb-8">
+                        <div className="overflow-hidden shadow-md">
+                            <img
+                                src={immagini[slideIndex]}
+                                alt={`${evento.titolo} - ${slideIndex + 1}`}
+                                className="w-full h-auto max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover transition-opacity duration-300"
+                            />
+                        </div>
+                        {immagini.length > 1 && (
+                            <>
+                                <button
+                                    onClick={() => setSlideIndex((prev) => (prev - 1 + immagini.length) % immagini.length)}
+                                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#1b4a54] rounded-full p-2 shadow-md transition cursor-pointer"
+                                >
+                                    <ChevronLeft size={24} />
+                                </button>
+                                <button
+                                    onClick={() => setSlideIndex((prev) => (prev + 1) % immagini.length)}
+                                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#1b4a54] rounded-full p-2 shadow-md transition cursor-pointer"
+                                >
+                                    <ChevronRight size={24} />
+                                </button>
+                                <div className="flex justify-center gap-2 mt-3">
+                                    {immagini.map((_, i) => (
+                                        <button
+                                            key={i}
+                                            onClick={() => setSlideIndex(i)}
+                                            className={`w-2.5 h-2.5 rounded-full transition cursor-pointer ${i === slideIndex ? "bg-[#1b4a54]" : "bg-[#1b4a54]/30"}`}
+                                        />
+                                    ))}
+                                </div>
+                            </>
+                        )}
+                    </div>
+                );
+            })()}
 
             {evento.data && (
                 <p className="text-sm text-gray-500 text-center mb-4">{evento.data}</p>

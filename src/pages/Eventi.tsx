@@ -54,7 +54,7 @@ const Eventi = () => {
                 <img
                   src={card.immagine}
                   alt={card.titolo}
-                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-56 object-cover"
                 />
               )}
 

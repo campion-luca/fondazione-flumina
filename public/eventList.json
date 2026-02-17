@@ -1,31 +1,37 @@
- [
+[
     {
         "id": 1,
-        "titolo": "Concerto di Solidarietà – Rovigo",
-        "contenuto": "Si è tenuto il concerto organizzato dalla @crocerossarovigo e dai #Rotary della provincia di Rovigo, a sostegno dell’acquisto di un carrello attrezzato con motopompa e torre faro, utile nelle emergenze legate al maltempo. La Fondazione Flumina ha contribuito all’iniziativa, sottolineando il proprio impegno concreto a favore del territorio. L’evento ha rappresentato anche la prima uscita pubblica della Presidente Jessica Banin, durante la quale ha condiviso l’impegno della Fondazione per valorizzare e tutelare il Polesine. Presente anche Anna Momesso, brand ambassador, per condividere con il pubblico le principali aree di interesse della Fondazione. Un caloroso plauso a tutti i musicisti del Gruppo Ottoni del @conservatoriorovigo, diretti dal Maestro Fabiano Cudiz, che hanno regalato al pubblico una performance coinvolgente e memorabile.",
-        "immagine": "/img/eventi/concertosolidarieta.png",
+        "titolo": "Musica, comunità e solidarietà: la Fondazione Flumina al concerto per il territorio",
+        "contenuto": "Una serata all'insegna della musica e dell'impegno civile. Si è tenuto il concerto organizzato dalla Croce Rossa di Rovigo e dai Rotary della provincia, con un obiettivo concreto e prezioso: raccogliere fondi per l'acquisto di un carrello attrezzato con motopompa e torre faro, strumento essenziale per affrontare le emergenze legate al maltempo. La Fondazione Flumina ha scelto di essere parte di questa iniziativa, confermando ancora una volta la propria vocazione al servizio del Polesine. Non solo come presenza simbolica, ma come contributo reale a un progetto che tutela la comunità nei momenti più difficili. L'evento ha avuto anche un significato speciale per la Fondazione: è stata la prima uscita pubblica della Presidente Jessica Banin, che ha colto l'occasione per condividere con il pubblico la visione e i valori che guidano il lavoro della Fondazione, con uno sguardo rivolto alla valorizzazione e alla protezione di questo territorio unico. Presente anche Anna Momesso, brand ambassador della Fondazione, che ha illustrato al pubblico le principali aree di interesse e i progetti in cui Flumina è impegnata. A chiudere la serata, la straordinaria performance del Gruppo Ottoni del Conservatorio di Rovigo, diretto dal Maestro Fabiano Cudiz: un concerto capace di emozionare, unire e lasciare il segno. Un grazie sentito a tutti i musicisti, agli organizzatori e a chi ha partecipato. È così che si costruisce una comunità.",
+        "immagine": "/img/eventi/concerto/concertosolidarieta.png",
         "galleria": [
-            "/img/eventi/concertosolidarieta.png"
+            "/img/eventi/concerto/concertosolidarieta.png",
+            "/img/eventi/concerto/valeria.png",
+            "/img/eventi/concerto/orchestra_suona.jpg",
+            "/img/eventi/concerto/croce_rossa_italiana.png",
+            "/img/eventi/concerto/anna_parla_1.png"
         ],
         "data": "30 / settembre / 2025 "
     },
     {
         "id": 2,
-        "titolo": "Teatro Sociale Eugenio Balzan",
-        "contenuto": "La nuova stagione del Teatro Balzan è già entrata nel vivo con due spettacoli che hanno inaugurato un programma ricco di emozioni tra musica e teatro: From Broadway With Love con l’Orchestra I Filarmonici Veneti e I Promessi Sposi – Opera Moderna. 🎶🎭 La Fondazione Flumina è tra i soci del teatro: una scelta che nasce dal desiderio di sostenere la cultura e valorizzare il nostro territorio. 🌿",
-        "immagine": "/img/eventi/teatrosociale.jpg",
+        "titolo": "Un nuovo socio, Teatro Sociale Eugenio Balzan",
+        "contenuto": "Il sipario si è alzato e la nuova stagione del Teatro Balzan è già entrata nel vivo. Due spettacoli d'eccezione hanno dato il via a un programma che promette emozioni, tra le note di grandi classici e la forza del teatro contemporaneo. Ad aprire le danze, From Broadway With Love con l'Orchestra I Filarmonici Veneti: un viaggio musicale nel cuore dei grandi musical che ha saputo conquistare il pubblico fin dalle prime battute. A seguire, I Promessi Sposi – Opera Moderna, una rivisitazione del capolavoro manzoniano capace di parlare alle nuove generazioni senza tradire la profondità dell'originale. La Fondazione Flumina è tra i soci del teatro — una scelta che non è casuale. Sostenere la cultura significa investire nell'identità di un territorio, custodirne la memoria e aprirlo al futuro. Il Teatro Balzan rappresenta per il Polesine un punto di riferimento prezioso, e la Fondazione è orgogliosa di farne parte. Una stagione da non perdere. Restate sintonizzati.",
+        "immagine": "/img/eventi/teatro/teatrosociale.jpg",
         "galleria": [
-            "/img/eventi/teatrosociale.jpg"
+            "/img/eventi/teatro/teatrosociale.jpg"
         ],
         "data": "06 / ottobre / 2025 "
     },
     {
         "id": 3,
-        "titolo": "La consegna del carrello attrezzato alla Croce Rossa di Rovigo",
-        "contenuto": "Con la consegna del nuovo carrello per le emergenze 🚨 alla @CroceRossaRovigo si è realizzato il progetto nato dalla collaborazione tra #Rotary di Rovigo e #FondazioneFlumina, uniti dal desiderio di offrire un aiuto tangibile al territorio. 🤝 Il carrello, dotato di motopompa, torre faro, generatore e attrezzature per la sicurezza dei volontari, 🦺 sarà un prezioso supporto in caso di allagamenti e altre situazioni di emergenza. Un gesto concreto per sostenere chi ogni giorno si impegna per #unitaliacheaiuta ❤️ #FondazioneFlumina #solidarietà #emergenza #territorio",
-        "immagine": "/img/eventi/carrello_cri.jpeg",
+        "titolo": "Un carrello per le emergenze: quando la solidarietà diventa azione concreta",
+        "contenuto": "Le buone intenzioni contano, ma ciò che fa davvero la differenza sono i gesti concreti. Ed è esattamente questo che si è realizzato con la consegna del nuovo carrello per le emergenze alla Croce Rossa di Rovigo. Il progetto è nato dalla collaborazione tra i Rotary di Rovigo e la Fondazione Flumina, uniti da un obiettivo comune: mettere a disposizione del territorio uno strumento reale, capace di fare la differenza nei momenti più critici. Il carrello è dotato di tutto il necessario per intervenire rapidamente in caso di allagamenti e altre situazioni di emergenza: motopompa, torre faro, generatore e attrezzature pensate per garantire la sicurezza dei volontari sul campo. Non si tratta solo di un'attrezzatura. È il risultato tangibile di una rete di persone e realtà che credono nel valore della collaborazione e nel dovere di prendersi cura della propria comunità. Un ringraziamento sentito a tutti coloro che hanno reso possibile questo risultato, e soprattutto a chi ogni giorno sceglie di mettersi al servizio degli altri.",
+        "immagine": "/img/eventi/cri/carrello_cri.jpeg",
         "galleria": [
-            "/img/eventi/carrello_cri.jpeg"
+            "/img/eventi/cri/carrello_cri.jpeg",
+            "/img/eventi/cri/carrello.jpeg",
+            "/img/eventi/cri/panorama.jpeg"
         ],
         "data": "08 / novembre / 2025 "
     }

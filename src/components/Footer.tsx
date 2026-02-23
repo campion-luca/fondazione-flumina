@@ -39,7 +39,8 @@ const Footer = () => {
                             <li className="pb-2 gap-1 flex items-center cursor-pointer hover:underline"><a href="https://www.instagram.com/fondazione_flumina/" target="_blank" className="flex items-center gap-1">
                                 <FaInstagram />Instagram</a></li>
 
-                            <li className="pb-2 gap-1 flex items-center text-gray-400 opacity-50 cursor-not-allowed"><FaLinkedin />Linkedin</li>
+                            <li className="pb-2 gap-1 flex items-center cursor-pointer hover:underline"><a href="https://www.linkedin.com/company/fondazione-flumina" target="_blank" className="flex items-center gap-1">
+                            <FaLinkedin />Linkedin</a></li>
                         </ol>
                     </div>
 

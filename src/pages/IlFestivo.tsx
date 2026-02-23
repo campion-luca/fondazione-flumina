@@ -44,7 +44,7 @@ const IlFestivo = () => {
                     <Newspaper className="w-8 h-8" />
                     <h1 className="text-4xl font-bold">Il Festivo</h1>
                 </div>
-                <p className="text-gray-500 text-sm mb-2 ms-11">L'inserto culturale della Fondazione Flumina</p>
+                <p className="text-gray-500 text-sm mb-2 ms-11">Inserto culturale</p>
                 <div className="h-px bg-[#1b4a54]/30 mb-8"></div>
 
                 {/* Griglia inserti */}

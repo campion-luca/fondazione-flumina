@@ -64,7 +64,7 @@ const EventoDettaglio: React.FC = () => {
                             <img
                                 src={immagini[slideIndex]}
                                 alt={`${evento.titolo} - ${slideIndex + 1}`}
-                                className="w-full h-auto max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-cover transition-opacity duration-300"
+                                className="w-full aspect-4/3 object-cover transition-opacity duration-300"
                             />
                         </div>
                         {immagini.length > 1 && (

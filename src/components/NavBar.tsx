@@ -65,7 +65,8 @@ const NavBar = () => {
         {/* Desktop Menu  */}
         <div className="flex flex-col justify-center items-start relative text-xl">
           <ol className="hidden md:flex font-medium select-none w-full justify-evenly">
-            <li className="cursor-pointer px-3" onClick={() => setOpenMenu(null)}><Link to='/'>Home</Link></li>
+            <li className="cursor-pointer"><Link to='/ilfestivo'>Il Festivo</Link></li>
+            <li className="cursor-pointer px-3"><Link to='/'>Home</Link></li>
             <li className="cursor-pointer" onClick={() => toggleMenu('fondazione')}>La Fondazione</li>
             <li className="cursor-pointer" onClick={() => toggleMenu('eventi')}>Eventi</li>
             {/* <li className="cursor-pointer" onClick={() => toggleMenu('about')}>Contatti</li> */}
@@ -94,7 +95,6 @@ const NavBar = () => {
                     <li className="cursor-pointer" onClick={toggleFocus}>
                       <Link to="/privacy">La nostra privacy</Link>
                     </li>
-                    <li className="cursor-pointer text-gray-600/50" onClick={toggleFocus}>Partner/Collaborazioni</li>
                   </>
                 )}
                 {openMenu === 'eventi' && (
@@ -122,6 +122,15 @@ const NavBar = () => {
           <div className="flex justify-end items-center pb-1 space-x-2">
 
 
+            <Link to='/ilfestivo'>
+              <div
+                className="px-4 py-2 font-semibold cursor-pointer"
+                onClick={() => setMobileOpenMenu(null)}
+              >
+                Il Festivo
+              </div>
+            </Link>
+
             <Link to='/'>
               <div
                 className="px-4 py-2 font-semibold cursor-pointer"
@@ -143,12 +152,7 @@ const NavBar = () => {
             >
               Eventi
             </div>
-            {/* <div
-              className="px-4 py-2 font-semibold cursor-pointer"
-              onClick={() => toggleMobileMenu('about')}
-            >
-              Contatti
-            </div> */}
+
 
 
           </div>

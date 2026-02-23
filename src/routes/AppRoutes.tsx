@@ -6,6 +6,8 @@ import Eventi from '../pages/Eventi';
 import ChiSiamo from '../pages/ChiSiamo';
 import EventoDettaglio from '../pages/EventoDettaglio';
 import Contatti from '../pages/Contatti';
+import IlFestivo from '../pages/IlFestivo';
+import FestivoDettaglio from '../pages/FestivoDettaglio';
 
 const AppRoutes = () => (
     <Routes>
@@ -16,6 +18,8 @@ const AppRoutes = () => (
         <Route path="/evento/:id" element={<EventoDettaglio />} />
         <Route path="/chisiamo" element={<ChiSiamo />} />
         <Route path='/contatti' element={<Contatti />} />
+        <Route path="/ilfestivo" element={<IlFestivo />} />
+        <Route path="/festivo/:id" element={<FestivoDettaglio />} />
     </Routes>
 )
 export default AppRoutes;

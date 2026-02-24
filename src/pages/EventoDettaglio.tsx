@@ -41,30 +41,22 @@ const EventoDettaglio: React.FC = () => {
     if (!evento) return <p>Evento non trovato.</p>;
 
 
+    const immagini = evento.galleria && evento.galleria.length > 0
+        ? evento.galleria
+        : evento.immagine ? [evento.immagine] : [];
+
     return (
-
         <div className="max-w-4xl mx-auto px-6 py-12 text-[#1b4a54]">
-            {/* <button
-                onClick={() => navigate(-1)}
-                className="mb-6 text-blue-600 hover:text-blue-800 transition"
-            >
-                ← Torna agli eventi
-            </button> */}
+            <h1 className="text-4xl font-bold mb-8 text-center">{evento.titolo}</h1>
 
-            <h1 className="text-4xl font-bold mb-6 text-center">{evento.titolo}</h1>
-
-            {(() => {
-                const immagini = evento.galleria && evento.galleria.length > 0
-                    ? evento.galleria
-                    : evento.immagine ? [evento.immagine] : [];
-                if (immagini.length === 0) return null;
-                return (
-                    <div className="relative w-full max-w-2xl mx-auto mb-8">
-                        <div className="overflow-hidden shadow-md">
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+                {immagini.length > 0 && (
+                    <div className="relative w-full md:w-2/5 shrink-0">
+                        <div className="overflow-hidden shadow-md rounded-sm">
                             <img
                                 src={immagini[slideIndex]}
                                 alt={`${evento.titolo} - ${slideIndex + 1}`}
-                                className="w-full aspect-4/3 object-cover transition-opacity duration-300"
+                                className="w-full aspect-3/4 object-cover transition-opacity duration-300"
                             />
                         </div>
                         {immagini.length > 1 && (
@@ -93,16 +85,17 @@ const EventoDettaglio: React.FC = () => {
                             </>
                         )}
                     </div>
-                );
-            })()}
+                )}
 
-            {evento.data && (
-                <p className="text-sm text-gray-500 text-center mb-4">{evento.data}</p>
-            )}
-
-            <p className="text-lg leading-relaxed whitespace-pre-line text-justify">
-                {evento.contenuto}
-            </p>
+                <div className="flex-1 min-w-0">
+                    {evento.data && (
+                        <p className="text-sm text-gray-500 mb-4">{evento.data}</p>
+                    )}
+                    <p className="text-lg leading-relaxed whitespace-pre-line text-justify">
+                        {evento.contenuto}
+                    </p>
+                </div>
+            </div>
         </div>
     )
 

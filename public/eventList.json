@@ -34,5 +34,15 @@
             "/img/eventi/cri/panorama.jpeg"
         ],
         "data": "08 / novembre / 2025 "
+    },
+    {
+        "id": 4,
+        "titolo": "Nasce 'Il festivo'",
+        "contenuto": "Nasce “Il Festivo”, il nuovo inserto culturale de La Voce di Rovigo, realizzato con il supporto della Fondazione Flumina. Uno spazio editoriale che intreccia contributi, riflessioni e approfondimenti originali, pensato per accompagnare il tempo libero. Inserto a cadenza mensile, “Il Festivo” propone una narrazione rinnovata del Polesine, in linea con l’impegno della Fondazione nel valorizzare e promuovere la cultura del territorio. Lo trovate in edicola ogni ultima domenica del mese. I numeri già pubblicati sono disponibili nella sezione dedicata del nostro sito.",
+        "immagine": "/img/ilfestivo/img/IlFestivo22022026.png",
+        "galleria": [
+            "/img/ilfestivo/img/IlFestivo22022026.png"
+        ],
+        "data": "23 / novembre / 2025 "
     }
 ]

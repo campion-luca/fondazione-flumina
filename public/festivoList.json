@@ -7,5 +7,14 @@
         "data": "22 / febbraio / 2026",
         "immagine": "/img/ilfestivo/img/IlFestivo22022026.png",
         "pdf": "/img/ilfestivo/pdf/IlFestivo22022026.pdf"
+    },
+    {
+        "id": 2,
+        "numero": 2,
+        "titolo": "Il Festivo — Numero 2",
+        "descrizione": "Virgilio Milani: scultore del passato e artista del futuro! Villa Pellegrini, il cuore ritrovato di Salvaterra",
+        "data": "29 / marzo / 2026",
+        "immagine": "/img/ilfestivo/img/IlFestivo30032026.png",
+        "pdf": "/img/ilfestivo/pdf/IlFestivo30032026.pdf"
     }
 ]

@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gswin64c --version)",
+      "Bash(gswin32c --version)",
+      "Bash(gs --version)",
+      "Bash(where gswin64c *)",
+      "Bash(where gswin32c *)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Program Files \\(x86\\)/**)",
+      "Bash(python -c \"import fitz; print\\('PyMuPDF OK'\\)\")",
+      "Bash(python -c \"import pikepdf; print\\('pikepdf OK'\\)\")",
+      "Bash(python -c \"import pypdf; print\\('pypdf OK'\\)\")",
+      "Bash(python -)"
+    ]
+  }
+}

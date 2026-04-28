@@ -76,7 +76,7 @@ const HomePage = () => {
             {/* Paragravo introduttivo */}
             <div className="my-4 max-w-5xl mt-10 text-justify p-6 text-black md:text-md">
                 <p>
-                    La <span className="font-semibold">Fondazione Flumina</span> nasce con l’obiettivo di promuovere il
+                    <span className="font-semibold">Fondazione Flumina</span> è una costituenda fondazione con l’obiettivo di promuovere il
                     benessere collettivo e valorizzare il territorio del Polesine attraverso progetti culturali,
                     formativi e di inclusione.
                     <br /> <br />

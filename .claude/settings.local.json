@@ -12,7 +12,9 @@
       "Bash(python -c \"import pikepdf; print\\('pikepdf OK'\\)\")",
       "Bash(python -c \"import pypdf; print\\('pypdf OK'\\)\")",
       "Bash(python -)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(python3 -c ' *)",
+      "Bash(node -e ' *)"
     ]
   }
 }

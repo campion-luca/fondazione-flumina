@@ -3,8 +3,14 @@ import Cookies from "../components/Cookies";
 import { Calendar } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 const HomePage = () => {
+    usePageMeta({
+        title: 'Home',
+        description: 'Fondazione Flumina promuove il benessere collettivo e valorizza il Polesine attraverso progetti culturali, formativi e di inclusione. Ascoltiamo il territorio per costruire valore.',
+        path: '/',
+    });
 
     // TIPIZZO IN QUANTO STO UTILIZZANDO TYPESCRIPT
     interface Card {

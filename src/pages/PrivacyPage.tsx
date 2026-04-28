@@ -1,7 +1,14 @@
 import React from 'react';
 import cartinaSfondo from "../assets/background/cartina_4.png";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 const PrivacyPage: React.FC = () => {
+  usePageMeta({
+    title: 'Privacy Policy',
+    description: 'Informativa sul trattamento dei dati personali di Fondazione Flumina, ai sensi del GDPR.',
+    path: '/privacy',
+  });
+
   return (
     <div className='min-h-screen flex flex-col text-[#1b4a54]'
       style={{

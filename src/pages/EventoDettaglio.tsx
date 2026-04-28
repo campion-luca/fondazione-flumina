@@ -1,6 +1,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 interface Evento {
     id: number;
@@ -17,6 +18,47 @@ const EventoDettaglio: React.FC = () => {
     const [evento, setEvento] = useState<Evento | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const [slideIndex, setSlideIndex] = useState(0);
+
+    usePageMeta({
+        title: evento?.titolo ?? 'Evento',
+        description: evento ? evento.contenuto.slice(0, 160) : 'Dettaglio evento di Fondazione Flumina.',
+        ogImage: evento?.immagine,
+        path: evento ? `/evento/${evento.id}` : '/eventi',
+        type: 'article',
+    });
+
+    useEffect(() => {
+        if (!evento) return;
+        const schema = {
+            '@context': 'https://schema.org',
+            '@type': 'Event',
+            name: evento.titolo,
+            description: evento.contenuto.slice(0, 200),
+            organizer: {
+                '@type': 'Organization',
+                name: 'Fondazione Flumina',
+                url: 'https://www.fondazioneflumina.it',
+            },
+            location: {
+                '@type': 'Place',
+                name: 'Polesine, Rovigo',
+                address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Rovigo',
+                    addressRegion: 'RO',
+                    addressCountry: 'IT',
+                },
+            },
+            ...(evento.immagine ? { image: `https://www.fondazioneflumina.it${evento.immagine}` } : {}),
+        };
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.id = 'evento-ld-json';
+        script.textContent = JSON.stringify(schema);
+        document.getElementById('evento-ld-json')?.remove();
+        document.head.appendChild(script);
+        return () => { document.getElementById('evento-ld-json')?.remove(); };
+    }, [evento]);
 
     useEffect(() => {
         const fetchEvento = async () => {

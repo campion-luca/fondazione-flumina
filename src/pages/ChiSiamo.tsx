@@ -1,8 +1,15 @@
 import logo from "../assets/logo/logo_nuovo.png";
 import Cookies from "../components/Cookies";
 import cartinaSfondo from "../assets/background/cartina_4.png";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 const ChiSiamo = () => {
+    usePageMeta({
+        title: 'Chi Siamo',
+        description: 'Scopri la storia e la missione di Fondazione Flumina: un flusso vitale di connessioni per il territorio del Polesine, tra Adige e Po.',
+        path: '/chisiamo',
+    });
+
     return (
         <div
             className="flex flex-col items-center justify-center min-h-screen text-[#1b4a54] px-6"

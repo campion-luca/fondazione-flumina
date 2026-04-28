@@ -2,8 +2,14 @@ import cartinaSfondo from "../assets/background/cartina_3.png";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Calendar } from "lucide-react";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 const Eventi = () => {
+  usePageMeta({
+    title: 'Eventi',
+    description: 'Tutti gli eventi di Fondazione Flumina: iniziative culturali, sociali e formative per la comunità del Polesine.',
+    path: '/eventi',
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0)

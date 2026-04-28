@@ -1,6 +1,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 interface Festivo {
     id: number;
@@ -17,6 +18,14 @@ const FestivoDettaglio: React.FC = () => {
     const [festivo, setFestivo] = useState<Festivo | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const [slideIndex, setSlideIndex] = useState(0);
+
+    usePageMeta({
+        title: festivo?.titolo ?? 'Il Festivo',
+        description: festivo ? (festivo.contenuto || 'Inserto culturale Il Festivo di Fondazione Flumina.').slice(0, 160) : 'Inserto culturale Il Festivo di Fondazione Flumina.',
+        ogImage: festivo?.immagine,
+        path: festivo ? `/festivo/${festivo.id}` : '/ilfestivo',
+        type: 'article',
+    });
 
     useEffect(() => {
         const fetchFestivo = async () => {

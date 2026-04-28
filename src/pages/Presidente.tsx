@@ -1,7 +1,14 @@
 import fotoPresidente from "../assets/presidente/presidente.jpeg";
 import cartinaSfondo from "../assets/background/cartina_3.png";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 const Presidente = () => {
+    usePageMeta({
+        title: 'La Presidente',
+        description: 'Jessica Banin, avvocato e Presidente di Fondazione Flumina, guida la fondazione con l\'obiettivo di sostenere lo sviluppo e la valorizzazione del territorio polesano.',
+        path: '/presidente',
+    });
+
     return (
         <section className="bg-gradient-to-br from-white via-gray-50 to-gray-100 text-black py-20 px-6 md:px-16 lg:px-32 text-base md:text-lg leading-relaxed min-h-screen"
             style={{

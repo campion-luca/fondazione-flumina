@@ -1,6 +1,7 @@
 import cartinaSfondo from "../assets/background/cartina_3.png";
 import { useState, useEffect } from "react";
 import { Newspaper, Download, Calendar } from "lucide-react";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 interface Inserto {
     id: number;
@@ -13,6 +14,11 @@ interface Inserto {
 }
 
 const IlFestivo = () => {
+    usePageMeta({
+        title: 'Il Festivo',
+        description: 'Il Festivo è l\'inserto culturale mensile de La Voce di Rovigo, realizzato con il supporto di Fondazione Flumina. Storie, cultura e territorio polesano.',
+        path: '/ilfestivo',
+    });
 
     useEffect(() => {
         window.scrollTo(0, 0);

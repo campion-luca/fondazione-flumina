@@ -11,7 +11,8 @@
       "Bash(python -c \"import fitz; print\\('PyMuPDF OK'\\)\")",
       "Bash(python -c \"import pikepdf; print\\('pikepdf OK'\\)\")",
       "Bash(python -c \"import pypdf; print\\('pypdf OK'\\)\")",
-      "Bash(python -)"
+      "Bash(python -)",
+      "Bash(npx tsc *)"
     ]
   }
 }

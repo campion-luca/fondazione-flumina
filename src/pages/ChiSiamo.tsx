@@ -48,8 +48,7 @@ const ChiSiamo = () => {
                 <p className="text-base md:text-lg leading-relaxed">
                     <h1 className="font-bold">Fondazione Flumina</h1>
                     <br /><br />
-                    Fondazione Flumina è una <strong>costituenda fondazione</strong>, attualmente in via di
-                    costituzione, che nasce con l’obiettivo di promuovere il benessere collettivo e valorizzare
+                    La costituenda <strong>Fondazione Flumina</strong> nasce con l’obiettivo di promuovere il benessere collettivo e valorizzare
                     il territorio del Polesine attraverso progetti culturali, formativi e di inclusione.
                     <br /><br />
                     Il nome Flumina deriva dal latino <em>flumen</em>, "fiume", ed è un omaggio

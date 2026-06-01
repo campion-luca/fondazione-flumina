@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Il Festivo - PDF originali non compressi (troppo grandi per GitHub)
+public/img/ilfestivo/pdf/IlFestivo*.pdf
+!public/img/ilfestivo/pdf/*_compressed.pdf
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

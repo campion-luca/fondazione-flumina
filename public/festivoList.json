@@ -25,5 +25,14 @@
         "data": "26 / aprile / 2026",
         "immagine": "/img/ilfestivo/img/IlFestivo26042026.png",
         "pdf": "/img/ilfestivo/pdf/IlFestivo26042026_compressed.pdf"
+    },
+    {
+        "id": 4,
+        "numero": 4,
+        "titolo": "Il Festivo — Numero 4",
+        "descrizione": "Dioniso non va ammansito, Apollo, l'ombra e la trasgressione come via",
+        "data": "31 / maggio / 2026",
+        "immagine": "/img/ilfestivo/img/IlFestivo30052026.png",
+        "pdf": "/img/ilfestivo/pdf/IlFestivo30052026_compressed.pdf"
     }
 ]

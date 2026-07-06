@@ -3,8 +3,11 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx';
 import { BrowserRouter } from 'react-router-dom';
-import NavBar from './components/NavBar.tsx';
-import Footer from './components/Footer.tsx';
+// --- SITO IN COSTRUZIONE ---
+// NavBar e Footer disabilitati per mostrare solo la landing page.
+// Per ripristinare il sito completo, riabilitare gli import e i componenti qui sotto.
+// import NavBar from './components/NavBar.tsx';
+// import Footer from './components/Footer.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -14,16 +17,16 @@ createRoot(document.getElementById('root')!).render(
       {/* Tutta la pagina deve sempre ricoprire la grandezza dello schermo */}
       <div className="flex flex-col min-h-screen pt-safe pb-safe">
 
-        <NavBar />
+        {/* <NavBar /> */}
 
         {/* il contenuto di app prenderà sempre gli spazi "vuoti" se presenti */}
-        <main className="grow pt-29 md:pt-19">
+        <main className="grow">
 
           <App />
 
         </main>
 
-        <Footer />
+        {/* <Footer /> */}
 
       </div>
 

@@ -1,4 +1,18 @@
 import { Route, Routes } from 'react-router-dom';
+import ComingSoon from '../pages/ComingSoon';
+
+// --- SITO IN COSTRUZIONE ---
+// Tutte le rotte mostrano la landing page "Sito in costruzione".
+// Per ripristinare il sito completo, riabilitare le rotte qui sotto,
+// e ripristinare NavBar e Footer in main.tsx.
+const AppRoutes = () => (
+    <Routes>
+        <Route path="*" element={<ComingSoon />} />
+    </Routes>
+)
+export default AppRoutes;
+
+/*
 import HomePage from '../pages/HomePage';
 import PrivacyPage from '../pages/PrivacyPage';
 import Presidente from '../pages/Presidente';
@@ -23,3 +37,4 @@ const AppRoutes = () => (
     </Routes>
 )
 export default AppRoutes;
+*/

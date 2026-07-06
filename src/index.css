@@ -2,6 +2,7 @@
 @import "@fontsource/montserrat";
 
 /* Font più simile a 'Universe' ma gratuito */
+@import '@fontsource-variable/work-sans';
 @import '@fontsource-variable/work-sans/wght-italic.css';
 
 /* inutilizzato */

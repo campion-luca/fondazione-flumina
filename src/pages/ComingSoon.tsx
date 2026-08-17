@@ -1,4 +1,4 @@
-import logo from "../assets/logo/logo_COVER.jpg";
+import logo from "../assets/logo/logo_costituenda.png";
 import { usePageMeta } from "../hooks/usePageMeta";
 
 const ComingSoon = () => {
